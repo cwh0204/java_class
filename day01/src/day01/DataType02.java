@@ -17,7 +17,6 @@ public class DataType02 {
 		System.out.println("나이:"+age);//+는 문자열 연결 연산기호
 		age = 27; //age변수명에는 단 하나의 값만 저장할 수 있다. 마지막에 저장된 값만 남는다.
 		System.out.println("변경된 나이:"+age);
-		
 	}
 
 }
