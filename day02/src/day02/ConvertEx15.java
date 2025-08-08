@@ -15,5 +15,4 @@ public class ConvertEx15 {
 		char b = (char)(a - ('a'-'A')); //'a' - 'A' = 97-65 = 32 -> 97-32=65 -> (char)65 -> 'A'
 		System.out.printf("'%c'에 해당하는 영문 대문자는 '%c'이다.\t",a, b);
 	}
-
 }
