@@ -18,11 +18,10 @@ public class OprTest14 {
 		System.out.print("숫자를 입력해주세요>>");
 		Scanner scan = new Scanner(System.in);
 		int num1 = Integer.parseInt(scan.nextLine());
-		if (num1 == 0) {
-			System.out.println("입력하신 숫자는 0입니다");
+		if (num1 != 0) {
+			System.out.printf("입력하신 숫자는 0이아닙니다 입력한 숫자는 %d \n",num1);
 		}else {
-			System.out.println("입력하신 숫자는 0이 아닙니다");
+			System.out.println("입력하신 숫자는 0입니다");
 		}
 	}
-
 }
