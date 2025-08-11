@@ -29,7 +29,7 @@ public class OprTest09 {
 			}else {
 				grade = 'F';
 			}
-			
+			 
 			System.out.printf("당신이 입력하신 %d점은(는) %c학점입니다.\n",score,grade);
 		}
 		
