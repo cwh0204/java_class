@@ -55,6 +55,7 @@ public class SwitchEx05 {
 		}else {
 			System.out.println("유효하지 않은 주민번호 입니다.");
 		}
+		
 	}
 
 }
