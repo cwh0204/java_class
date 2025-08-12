@@ -28,5 +28,4 @@ public class SwitchEx07 {
 		method02("d");
 		method02("null");
 	}
-
 }
