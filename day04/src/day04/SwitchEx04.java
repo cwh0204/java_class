@@ -29,5 +29,4 @@ public class SwitchEx04 {
 			break;
 		}
 	}
-
 }
