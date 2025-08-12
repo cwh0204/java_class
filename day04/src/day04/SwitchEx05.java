@@ -52,6 +52,8 @@ public class SwitchEx05 {
 			}else {
 				System.out.println("당신은 2000년 이후에 태어난 여자입니다.");
 			}
+		}else {
+			System.out.println("유효하지 않은 주민번호 입니다.");
 		}
 	}
 
