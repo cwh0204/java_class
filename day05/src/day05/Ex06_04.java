@@ -17,7 +17,5 @@ public class Ex06_04 {
 		for(char i = 'A'; i<='Z'; i++) {
 			System.out.print(i);
 		}
-		
 	}
-
 }

@@ -22,5 +22,4 @@ public class ForEx07 {
 			System.out.println("\n===================>\n");
 		}
 	}
-
 }
