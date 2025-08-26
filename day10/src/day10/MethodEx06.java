@@ -16,12 +16,13 @@ public class MethodEx06 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		int x = 7;
 		int y = x;
 		
-		
 		MyDate05 d = new MyDate05();
 		MyDate05 t = d; //t참조변수에 d객체주소를 대입. 결국 t와 d는 같은 객체주소를 가리킨다. 즉 같은 주소값을 공유한다.
+		
 		
 		System.out.println("x="+x+", y" + y); //7,7
 		System.out.println(d.year+" 년"+d.month+" 월"+d.day+"일");//2024년 10월 31일
