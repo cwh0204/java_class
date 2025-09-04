@@ -4,6 +4,9 @@
  *	설명 : 코드 재활용을 위한 상속
  */
 
+import lombok.Getter;
+import lombok.Setter;
+
 class Point2D{
 	private int x;
 	private int y;	
@@ -24,17 +27,18 @@ class Point2D{
 	
 }//Point2D class
 
+@Getter
+@Setter
 class Point3D extends Point2D{
 	private int z;
 
-	public int getZ() {
-		return z;
-	}
-
-	public void setZ(int z) {
-		this.z = z;
-	}
-	
+//	public int getZ() {
+//		return z;
+//	}
+//
+//	public void setZ(int z) {
+//		this.z = z;
+//	}
 }//Point3D
 
 public class StaticEx05 {
