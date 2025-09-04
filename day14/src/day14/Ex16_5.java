@@ -43,15 +43,13 @@ class DicaPhone extends HandPhone{
 	}
 	
 	public void prnDicaPhone() {
-		System.out.println("모델명 : "+super.model+" 번호 : "+ super.number +" 화소수 : " + this.pixel);
+		System.out.println("모델명 : "+ model +" 번호 : "+ number +" 화소수 : " + pixel);
 	}
 }
 public class Ex16_5 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DicaPhone dp1 = new DicaPhone("갤럭시","010","1024");
 		dp1.prnDicaPhone();
 	}
-
 }
