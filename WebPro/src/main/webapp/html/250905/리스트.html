@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리스트</title>
+</head>
+
+<!-- 
+   리스트 
+   1. 순서가 없는 리스트 ==> <ul>태그 사용 
+   2. 순서가 있는 리스트 ==> <ol>태그 사용
+     ==> <ul>태그와 <ol>태그의 하위 태그로 <li>태그를 사용하는데
+          <li>태그에는 리스트에 나타날 항목들을 기술한다.
+          
+   3. 정의 리스트 ==> <dl>태그 사용
+      ==> <dl>태그의 하위 태그
+         1) <dt>태그에는 '제목'에 해당하는 내용을 기술
+         2) <dd>태그에는 그 내용을 기술한다.
+         
+   
+ -->
+
+<body>
+
+<h3>순서가 없는 리스트</h3>
+
+<!-- 
+   <ul> 태그는 스타일 속성 list-style-type을 이용하여 
+   블릿기호의 종류를 설정한다. ==> disc(큰 점 모양으로 정리.), square(사각형), circle(o)
+ -->
+
+<ul style="list-style-type:circle">
+<li>사과</li>
+<li>배</li>
+<li>복숭아</li>
+<ul style="list-style-type:square">
+   <li>조치원</li>
+   <li>청주</li>
+   <li>옥천</li>
+   <li>괴산</li>
+</ul>
+<li>대추</li>
+<li>감
+	<ol>
+		<li>포항</li>
+		<li>포항힝</li>
+	</ol>
+</li>
+</ul>
+
+<hr color="red">
+
+<!-- 
+   <ol>태그의 속성
+      1) type ==> 순서를 나타내는 기호를 지정한다.
+            ==> 1(숫자), A,a(알파벳), I,i(로마숫자)
+            ==> 스타일 속성 list-style-type에 지정할 수 있는 종류
+               ==> (decimal(숫자)), upper-alpha(A), lower-alpha(a)
+               		upper-roman(i), lower-roman(i),
+               		hangul(가,나,다),
+               		korean-hangul-formal(일, 이 ,삼 ...)
+               		) 
+	<ol>태그의 하위 태그인 <li>태그의 속성
+		1) value ==> 해당 항목의 순번을 변경한다.
+				 ==> 해당 항목의 순번이 변경되면 해당 항목 이후의 항목들도
+				 	 자동으로 순번이 변경된다
+ -->
+
+<h3>순서가 있는 리스트</h3>
+<ol type="I" start="5" style="list-style-type: hangul;">
+<li>서울</li>
+<li>대전</li>
+<li>대구</li>
+<li>광주</li>
+<li value="1">부산</li>
+<li>울산</li>
+<li>청주</li>
+</ol>
+<h3>정의 리스트</h3>
+
+<!-- 
+   형식) 
+      <dl>
+         <dt>제목</dt>
+         <dd>제목에 대한 설명글 등의 내용을 기술.</dd>
+         
+      </dl>
+
+ -->
+ <dl>
+    <dt>WWW</dt>
+    <dd>World Wide Web의 약자로 인터넷을 통칭하는 용어이다.</dd>
+    <dt>에스프레소 </dt>
+    <dd>커피의 기본, 커피의 원액을 말한다.</dd>
+ 	<dt>봄 꽃</dt>
+ 	<dd>봄에 꽃이 피는 다년생 식물은 꽃잔디, 금낭화, 할미꽃, 어성초
+ 		복수초, 산마늘, 붓꽃, 둥굴레, 삼지구엽초 등이 있다
+ 	</dd>
+ 	<dt>여름 꽃</dt>
+ 	<dd>여름에 꽃이 피는 식물은 맥문동, 애란, 수국, 인동초</dd>
+ 	<dd>금계국, 달맞이꽃, 금불초, 엉겅퀴 등이 있다</dd>
+ </dl>
+ 
+ <!-- 
+ 1. 자신의 취미들을 순서가 없는 리스트로 나타내시오
+ 2. 자신이 가고싶은 여행지들을 순서가 있는 리스트로 나타내시오
+ 3. HTML Request(요청) Response(응담)에 대해서 설명하시오.
+ 
+  -->
+ <hr color="red">
+ <h3>자신의 취미들을 순서가 없는 리스트로 나타내시오</h3>
+ <ul style="list-style-type:circle">
+	<li>낚시</li>
+	<li>걷기</li>
+	<li>게임</li>
+</ul>
+ <h3>자신이 가고싶은 여행지들을 순서가 있는 리스트로 나타내시오</h3>
+ <ol>
+ 	<li>제주도</li>
+ 	<li>서울</li>
+ 	<li>강원도</li>
+ </ol>
+<h3>HTML Request(요청) Response(응담)에 대해서 설명하시오.</h3>
+<dt>Request(요청)</dt>
+<dd>사용자가 웹 브라우저에서 주소를 입력하거나 버튼을 클릭하면, 브라우저는 서버에 **요청(Request)**을 보냅니다.</dd>
+<dd>GET POST PUT DELETE</dd>
+<dt>Response(응담)</dt>
+<dd>서버는 요청을 받고, 그에 맞는 응답(Response)**을 브라우저에 돌려줍니다.</dd>
+<dd>200 404 405 500</dd>
+</body>
+</html>

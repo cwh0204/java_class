@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<table border="1">
+	<tr>
+		<td>1번</td>
+		<td>2번</td>
+		<td>3번</td>
+		<td>4번</td>
+	</tr>
+	<tr>
+		<td>1번</td>
+		<td>2번</td>
+		<td>3번</td>
+		<td>4번</td>
+	</tr>
+	<tr>
+		<td>1번</td>
+		<td>2번</td>
+		<td>3번</td>
+		<td>4번</td>
+	</tr>
+	<tr>
+		<td>1번</td>
+		<td>2번</td>
+		<td>3번</td>
+		<td>4번</td>
+	</tr>
+</table>
+
+<table border="1">
+	<tr>
+		<td style="width: 50px;height: 50px;">가</td>
+		<td>나</td>
+		<td>다</td>
+		<td>라</td>
+	</tr>
+	<tr>
+		<td>가</td>
+		<td>나</td>
+		<td>다</td>
+		<td>라</td>
+	<tr>
+		<td>가</td>
+		<td>나</td>
+		<td>다</td>
+		<td>라</td>
+	</tr>
+	<tr>
+		<td>가</td>
+		<td>나</td>
+		<td>다</td>
+		<td>라</td>
+	</tr>
+	<tr>
+		<td>가</td>
+		<td>나</td>
+		<td>다</td>
+		<td>라</td>
+	</tr>
+</table>
+<!-- 
+	<th>태그의 특정 ==> 이 태그의 내용 중 글자는 진하고 가운데 정렬되어 나타난다.
+				 ==> 각 컬럼의 제목을 나타낼 때 주로 사용된다.
+ -->
+<table style="text-align: center; vertical-align: middle;" border="1">
+	
+	 <caption style="caption-side:bottom; text-align: center;">성적표2</caption>
+	<tr>
+		<th>이름</th>
+		<th>국어</th>
+		<th>수학</th>
+		<th>영어</th>
+	</tr>
+	<tr>
+		<td>홍길동</td>
+		<td>85</td>
+		<td>64</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>임꺽정</td>
+		<td>64</td>
+		<td>24</td>
+		<td>18</td>
+	</tr>
+</table>
+<!-- 
+	표 제목의 위치 정하기 (style 이용)
+	1) caption-side ==> 표의 위쪽(top) 또는 아래쪽(bottom)에 나타나도록 한다
+ -->
+ <table border="1" style="width:600px;">
+ 	<tr>
+ 		<td>&nbsp;</td>
+ 		<td colspan="2">&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 	</tr>
+ 	<tr>
+ 		<td>&nbsp;</td>
+ 		<td colspan="3">&nbsp;</td>
+ 	</tr>
+ 	<tr>
+ 		<td>&nbsp;</td>
+ 		<td rowspan="2" colspan="2">&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 	</tr>
+ 	<tr>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 	</tr>
+ 	 <tr>
+ 	 	<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 	</tr>
+ </table>
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+ 
+ <table border="1" style="width:600px;">
+ 	<tr>
+ 		<td colspan="2">&nbsp;</td>
+ 		<td colspan="2">&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>		
+ 	</tr>
+ 	<tr>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td rowspan="3">&nbsp;</td>	
+ 		<td colspan="2">&nbsp;</td>
+ 		<td>&nbsp;</td>	
+ 	</tr>
+ 	<tr>
+ 		<td colspan="4">&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td rowspan="2" colspan="2">&nbsp;</td>
+ 	</tr>
+ 	<tr>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 		<td>&nbsp;</td>
+ 	</tr>
+ </table>
+ <br>
+ <br>
+ <br>
+  <table border="1" style="width:600px; text-align: center;">
+  	<tr>
+  		<td>1</td>
+  		<td>2</td>
+  		<td>3</td>
+  		<td>4</td>
+  		<td colspan="2">5</td>
+  		<td colspan="2">6</td>
+  	</tr>
+  	  	<tr>
+  		<td colspan="2" rowspan="2">7</td>
+  		<td colspan="2" rowspan="4">8</td>
+  		<td colspan="2" rowspan="4">8</td>
+  		<td>10</td>
+  	</tr>
+  	  	<tr>
+  		<td>11</td>
+  	</tr>
+  	  	<tr>
+  		<td colspan="2" rowspan="2">12</td>
+  		<td>13</td>
+  	</tr>
+  	  	<tr>
+  		<td>14</td>
+  	</tr>
+  	  	<tr>
+  		<td colspan="2" rowspan="2">15</td>
+  		<td colspan="2">16</td>
+  		<td colspan="3">17</td>
+  	</tr>
+  	  	<tr>
+  		<td colspan="4">18</td>
+  		<td>19</td>
+  	</tr>
+  </table>
+  <table style="border:1px solid tomato; background-color: bisque; text-align: center;
+    width: 300px;">
+  	<tr style="background-color: burlywood;">
+  		<td>이름</td>
+  		<td>국어</td>
+  		<td>영어</td>
+  		<td>수학</td>
+  	</tr>
+  	 <tr>
+  		<td>홍길동</td>
+  		<td>84</td>
+  		<td>64</td>
+  		<td>32</td>
+  	</tr>
+  </table>
+  
+</body>
+</html>
