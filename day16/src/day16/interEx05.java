@@ -45,5 +45,4 @@ public class interEx05 {
 		sub05.hello("홍길동");
 		sub05.greeting("홍길동");
 	}
-
 }
