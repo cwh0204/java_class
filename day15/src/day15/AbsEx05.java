@@ -50,7 +50,7 @@ public class AbsEx05 {
 		 */
 		for(ShapeClass j : arr) {
 			j.drow();
+			System.out.println(j);
 		}
 	}
-
 }

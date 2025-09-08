@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fieldset</title>
+</head>
+<body>
+<!-- 
+	<fieldset>태그 ==> 입력 요소들을 그룹으로 묶어서 표현할 때 사용하는 태그이다.
+	<legend>태그	  ==> fieldset의 제목을 지정할 때 사용한다.
+	
+ -->
+ 
+ <!-- 
+ 	입력 요소에 사용하는 속성
+ 	1) placehoder ==> 입력값에 대한 힌트를 희미하게 보여준다.
+ 	2) value      ==> 초기값을 설정할 때 사용한다.
+ 	3) autofocus  ==> 페이지가 로드되면 해당 요소에 입력 포커스가 놓인다.
+ 	4) readonly   ==> 입력 요소의 값을 수정할 수 없다.
+ 	5) disabled   ==> 입력 요소를 비활성화 한다.
+ 						(비활성화된 객체는 서버로 전송도 되지 않는다.)
+  -->
+ <form action="">
+ <fieldset style="width:300px">
+ 	<legend>인적사항</legend>
+ 	이 름 : <input type="text" name="irim" placeholder="이름을 입력하세요"><br><br>
+ 	전 화 : <input type="text" name="tel" value="010-1234-1234" readonly><br><br>
+ 	전 화 : <input type="text" name="hometel" value="010-2222-3333" disabled><br><br>
+ 	주 소 : <input type="text" name="addr" autofocus><br><br>
+ </fieldset>
+ 	<input type="submit" value="전송">
+ </form>
+ <hr color="red">
+ 
+ <fieldset>
+ 	<legend>checkbox, radio객체와 label 연결하기</legend>
+ 	좋아하는 과일 :
+ 		<input type="checkbox" name="tt" value="사과" id="test1"><label for="test1">사과</label>
+ 		<input type="checkbox" name="tt" value="포도" id="test2"><label for="test2">포도</label>
+ 		<input type="checkbox" name="tt" value="배" id="test3"><label for="test3">배</label>
+		<br><br>
+		<input type="radio" name="rr" value="사과" id="test4"><label for="test4">사과</label>
+ 		<input type="radio" name="rr" value="포도" id="test5"><label for="test5">포도</label>
+ 		<input type="radio" name="rr" value="배" id="test6"><label for="test6">배</label>
+		<br><br>
+ </fieldset>
+</body>
+</html>
