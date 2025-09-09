@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS의 의사클래스</title>
+<style type="text/css" herf="">
+
+/*
+	- 의사클래스 ==> 클래스가 정의된 것처럼 간주되어 처리되는 것
+	  형식) 셀렉터: 의사클래스명 { 스타일 지정 }
+*/
+
+/*
+	1) 동적 의사 클래스
+	a:link ==> 방문한 내역이 없는 링크 걸린 부분에 스타일을 적용한다.
+	a:visited ==> 방문한 내역이 있는 링크 걸린 부분에 스타일을 적용한다.
+	
+	셀렉터: hover ==> '셀렉터'에 해당되는 곳에 마우스 커서가 놓였을 때 소타일을 적용한다.
+	셀렉터: active ==> '셀렉터'에 해당되는 곳을 클릭하는 순간 스타일을 적용한다.
+	셀렉터: focus ==> '셀렉터'에 해당되는 곳에 포커스가 오면 스타일을 적용한다.
+	
+	a:link {color:green;}
+	a:visited {color:red;}
+	
+	2) 상태 의사 클래스
+	셀렉터:chekced ==> 'checkbox'나 'radio'버튼에 체크된 상태와
+				<select> 태그의 <option>중 선택된 상태일 때의 스타일 적용한다.
+	셀렉터: enabled ==> 셀럭터에 해당되는 것들 중 'enabled'상태인 곳에 스타일을 적용한다.
+	셀럭터: disabled ==> 셀렉터에 해당되는 것들 중 'disabled' 상태인 곳에 스타일을 적용한다.
+	
+	3) 기타 의사 클래스
+	셀렉터1:not(셀렉터2) ==> '셀렉터1'의 것들 중에서 '셀렉터2'에 해당되지 않는 곳에
+				스타일을 적용한다.
+*/
+
+a:link, a:visited {
+	color:black;
+	text-decoration: none;
+}
+
+a:hover,a:active {
+	color:gray;
+	text-decoration: underline;
+}
+
+div{
+	width:200px;
+	height: 50px;
+	background-color: yellow;
+}
+
+div:hover{
+	background-color: pink;
+	border:1px solid yellow;
+}
+
+div:active{
+	background-color: red;
+	border:1px solid blue;
+	font-size: 15pt;
+}
+select option:chekced{
+	background-color: yellow;
+}
+input:disabled {
+	border: 1px solid blue;
+	background-color: darkblue;
+}
+</style>
+
+</head>
+<body>
+보통 글자<br><br>
+<a href="http://www.daum.net">Daum 사이트 가기</a><br><br>
+<a href="http://www.kbs.co.kr">여긴 어디?</a><br><br>
+<div>안녕하세요</div>
+	<select size=10>
+		<option value="대전" style="background-color: pink">대전</option>
+		<option value="청주">청주</option>
+		<option value="서울">서울</option>
+		<option value="오창">오창</option>
+		<option value="오송">오송</option>
+	</select>
+	<input type="text" disabled><br><br>
+</body>
+</html>

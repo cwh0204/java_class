@@ -119,39 +119,12 @@ class carFullOption extends car implements HeatedSeat,SunRoof,Navigation{
 		// TODO Auto-generated method stub
 		System.out.println("열선시트");
 	}
-}
-
-class carFullOption1 extends car implements HeatedSeat,SunRoof,Navigation,red{
-
-	@Override
-	public void stop() {
-		// TODO Auto-generated method stub
-		System.out.println("앞으로 갑니다");
-	}
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub	
-		System.out.println("멈춥니다");
-	}
-	@Override
-	public void navigation() {
-		// TODO Auto-generated method stub
-		System.out.println("네이게이션");
-	}
-	@Override
-	public void sunroof() {
-		// TODO Auto-generated method stub
-		System.out.println("썬루프");
-	}
-	@Override
-	public void hear() {
-		// TODO Auto-generated method stub
-		System.out.println("열선시트");
-	}
-	@Override
-	public void red(String red) {
-		// TODO Auto-generated method stub
-		System.out.println("색상" + red);
+	public void all() {
+		this.run();
+		this.stop();
+		this.navigation();
+		this.sunroof();
+		this.hear();
 	}
 }
 
@@ -160,16 +133,6 @@ public class interTest01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		carFullOption full = new carFullOption();
-		carFullOption full1 = new carFullOption();
-		carFullOption full2 = new carFullOption();
-		carFullOption full3 = new carFullOption();
-		carFullOption full4 = new carFullOption();
-		carFullOption full5 = new carFullOption();
-		carFullOption full6 = new carFullOption();
-		full.run();
-		full.stop();
-		full.navigation();
-		full.hear();
-		full.sunroof();
+		full.all();		
 	}
 }
