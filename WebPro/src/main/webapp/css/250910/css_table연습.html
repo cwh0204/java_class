@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+
+/*
+
+	테이블의 너비의 크기는 400px로 하고 테두리선의 
+
+*/
+table {
+	width: 400px;
+	border: 1px solid black;
+	background-color: yellow;
+}
+td:nth-child(odd){
+	background-color: pink;
+}
+td:nth-child(even){
+	background-color: aqua;
+}
+td {
+	border: 1px solid black;
+}
+caption{
+	background-color: lightgreen;
+	caption-side: bottom;
+  	text-align: center; 
+}
+</style>
+
+</head>
+<body>
+<table>
+
+<caption>주 소 록</caption>
+<tr class="title">
+	<td> 이 름 </td>
+	<td> 주 소 </td>
+</tr>
+<tr>
+	<td>홍길동</td>
+	<td>대전시 중구 대흥동</td>
+</tr>
+<tr>
+	<td>일지매</td>
+	<td>대전시 중구 도마동</td>
+</tr>
+<tr>
+	<td>성춘향</td>
+	<td>대전시 중구 봉명동</td>
+</tr>
+<tr>
+	<td>이몽룡</td>
+	<td>대전시 중구 법동</td>
+</tr>
+<tr>
+	<td>이순신</td>
+	<td>대전시 중구 대동</td>
+</tr>
+</table>
+</body>
+</html>

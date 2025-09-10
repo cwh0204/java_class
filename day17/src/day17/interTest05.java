@@ -27,7 +27,6 @@ class Point05 extends Object{
 			return false;
 		}
 	}
-	
 }
 
 public class interTest05 {

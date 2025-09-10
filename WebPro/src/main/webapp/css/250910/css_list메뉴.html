@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<style type="text/css">
+/*
+	-list에 지정하는 스타일
+		1) list-style-type ==> 불릿기호를 설정한다.
+			(disc, square, circle)
+			(lower=alpha, upper-alpha,
+			 lower-roman, upper-roman,
+			 number,
+			 hangul,
+			 none)
+		'none'값을 지정하면 블릿기호가 출력되지 않는다.
+		
+		2) list-style-image : url('경로명/그림파일명.확장자')
+			==> 블릿기호 대신 지정한 이미지 출력한다.
+
+		ul{
+		list-style-type: none;
+		list-style-image: url(../../images/water.jpg)
+		}
+*/
+ul{
+	list-style-type: none;
+}
+ul li{
+	display: inline;
+    padding: 10px 40px;
+	border: 1px solid red;
+}
+
+ul li:hover{
+	background-color: lightgray;
+}
+ul li a{
+	text-decoration: none;
+}
+
+</style>
+
+</head>
+<body>
+
+<ul>
+	<li><a href="#">홈으로</a></li>
+	<li><a href="#">회사소개</a></li>
+	<li><a href="#">제품소개</a></li>
+	<li><a href="#">질문과응답</a></li>
+	<li><a href="#">연락처</a></li>
+	<li><a href="#">고객센터</a></li>
+	
+</ul>
+
+</body>
+</html>

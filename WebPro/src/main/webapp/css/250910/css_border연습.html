@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테두리선</title>
+<style>
+
+p{
+	width: 500px;
+	height: 50px;
+	border-width: 5px; /* 테두리선의 두깨 */
+	border-color: green; /* 테두리선의 색 */
+	
+	/* 테두리선의 종류는 border-style로 지정한다. */
+	
+}
+
+h3{
+	width: 150px;
+	height: 150px;
+	border: 1px solid blue;
+	border-radius: 75px; /* 둥근 테두리선(꼭지점 모따기) */
+	background-image: url(../../images/홍길동.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 150px;
+	
+	box-shadow: 5px 5px 5px blue;
+}
+
+</style>
+</head>
+<body>
+<h3>border 연습</h3>
+
+<p style="border-style:none;">none</p>
+<p style="border-style:dotted;">dotted</p>
+<p style="border-style:dashed;">dashed</p>
+<p style="border-style:solid;">solid</p>
+<p style="border-style:double;">double</p>
+<p style="border-style:groove;">groove</p>
+<p style="border-style:ridge;">ridge</p>
+<p style="border-style:inset;">inset</p>
+<p style="border-style:outset;">outset</p>
+
+</body>
+</html>

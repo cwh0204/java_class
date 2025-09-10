@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 자식필터</title>
+<style type="text/css">
+p, div{
+	font-size:20pt; width: 400px; height: 60px;
+	border: 1px solid black;
+}
+/*
+	div:nth-child(3){
+	background-color: yellow;
+	}
+
+	div:nth-child(2n-1){
+		background-color: yellow;
+	}
+*/
+
+/*
+	셀렉터:nth-of-type(번호)
+		==> '셀렉터'의 부모의 자식들 중에서 '셀렉터'에 해당되는 것들 중에서 '번호'번째 요소를 선택한다.
+		
+	div:nth-of-type(3){
+	background-color: pink;
+	}
+
+	div:nth-of-type(2n-1){
+		background-color: pink;
+	}
+*/
+
+</style>
+</head>
+<body>
+<header>
+	<p>첫째</p>
+	<p>둘째</p>
+	<div>셋째</div>
+	<div>넷째</div>
+	<div>다섯째</div>
+</header>
+<div>여섯째</div>
+<div>일곱째</div>
+<div>여덟째</div>
+</body>
+</html>

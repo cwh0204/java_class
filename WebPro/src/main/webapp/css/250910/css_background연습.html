@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배경 설정 연습</title>
+<style type="text/css">
+/*
+	- 배경 이미지 설정 형식)
+			==> background-image: url('경로명/그림파일명.확장자');
+	
+	- CSS에서 상대경로를 지정할 때 기준 위치(현재 위치)
+	1) 인라인CSS, 내부 CSS ==> HTML문서의 저장 위치
+	2) 외부CSS ==> 외부 CSS 파일의 저장 위치
+	
+	- 배경 이미지의 반복 여부 : background-repeat
+		repeat  (상하 좌우 반복 ==> 기본값)
+		no-repeat (반복하지 않는다.)
+		repeat-x, repeat-y (x축 , y축 방향으로만 반복)
+	- 배경 이미지의 위치 설정 : background-position
+		==> top, center, bottom --> 상하
+		==> left, center, right --> 좌우
+	- 배경 이미지의 크기 : background-size: 너비 높이
+	
+	- 배경 이미지의 스크롤 설정: background-attachment
+		==> local, scroll (배경과 내용이 같이 움직인다.)
+		==> fixed (배경은 고정되서 스크롤 되지않고 내용만 스크롤된다.)
+		
+	- 그라데이션 설정
+		==> background-image 속성에 liner-gradient를 설정하여 구현한다.
+		- liner-gradient의 형식
+			==> liner-gradient(방향, 색1, 색2, ...)
+			==> 방향은 to bottm, to right, to top, to left 또는
+					각도를 기준으로 설정할 수 있고 생략하면 'to bottom'이 기본값으로 설정된다.
+*/
+body{
+	/*
+	background-color: yellow;
+	background-image: url(../../images/water.jpg);
+	background-repeat: repeat-y;
+	background-position: center;
+	background-size: 100px 100px;
+	background-attachment: fixed;
+	background-image: linear-gradient(red, yellow);
+	*/
+	
+
+}
+
+div{
+	background-image: linear-gradient(90deg, red, yellow, green);
+	width: 400px;
+	height:400px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h3>background를 연습합니다.</h3>
+<div></div>
+<img src="../../images/water.jpg">
+배경은...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+가나다라...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+마바사아...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+자차카타...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>

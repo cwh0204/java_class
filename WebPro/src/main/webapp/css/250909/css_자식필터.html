@@ -8,6 +8,42 @@ td {
 	width: 50px;
 	text-align: center;
 }
+/*
+	자식 요소들 중에서 순번을 이용하여 선택하는 방법
+	
+	1) 셀렉터:nth-child(번호)
+	==> '셀렉터'의 부모의 자식들 중에서 '번호'번째 요소가 '셀렉터'와 같은 요소를 선택한다.
+	==> '번호'는 1부터 시작한다.
+	
+	2) 셀렉터:nth-child(odd)
+		==> '셀렉터'의 부모의 자식들 중에서 '홀수'번째 요소가 '셀렉터'와 같은 요소를 선택한다.
+		
+	3) 셀렉터:nth-child(even)
+		==> '셀렉터'의 부모의 자식들 중에서 '짝수'번째 요소가 '셀렉터'와 같은 요소를 선택한다.]
+	
+	4) 셀렉터:nth-child(xn +y)
+		==> x와 y는 숫자(양수, 음수 가능)
+		==> 위의 식에 n자리에 0,1,2,3,4.....의 정수를 차례로 대입하여 계산된 결과값으로
+			위치를 구한다.
+	5) 셀렉터:first-child
+		==> 첫번째 요소 찾기
+	   셀렉터:last-child
+	   ==> 마지막 요소 찾기
+	   셀렉터:only-child
+	   ==> 하나밖에 없는 요소 찾기
+*/
+/*
+td:nth-child(3) {background-color: yellow;}
+td:nth-child(odd) {background-color: yellow;}
+td:nth-child(even) {background-color: pink;}
+td:nth-child(3n+1){background-color: pink}
+
+*/
+
+td:first-child{background-color: red}
+td:first-child{background-color: red}
+td:first-child{background-color: red}
+
 </style>
 
 </head>
