@@ -26,6 +26,6 @@ public class ListEx16 {
 		
 		List<Object> li02 = Arrays.asList(arr02);
 		addNumber(li02);
+		
 	}
-
 }
