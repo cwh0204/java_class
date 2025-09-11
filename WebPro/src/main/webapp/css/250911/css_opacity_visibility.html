@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Opacity, Visibility</title>
+
+<style type="text/css">
+
+img{
+	width:150px;
+	height: 120px;
+}
+/*
+	opacity : 불투명도를 설정한다. (0 ~ 1 사이의 값으로 설정한다.)
+				(0 : 완전 투명, 1 : 완전 불투명)
+*/
+
+img.one{
+	opacity: 0.3;
+}
+
+/*
+	visibility : 화면에 보이게 하거나 보이지 않게 설정한다.
+				( hidden => 안보이게 한다. , visible => 보이게 한다.(기본값) )
+*/
+img.two{
+	visibility: hidden;
+}
+
+/*
+	display : none;
+*/
+
+img.three{
+	display: none;
+}
+
+</style>
+
+</head>
+<body>
+<img src="../../images/computer.png" class="one">
+<img src="../../images/dog.png">
+<br><hr color="red">
+
+<img src="../../images/computer.png" class="two">
+<img src="../../images/dog.png">
+<br><hr color="red">
+
+<img src="../../images/computer.png" class="three">
+<img src="../../images/dog.png">
+<br><hr color="red">
+</body>
+</html>

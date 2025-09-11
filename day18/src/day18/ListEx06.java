@@ -3,7 +3,7 @@ package day18;
 import java.util.Stack;
 
 /*
- * 작성일 : 2025-09-10
+ * 작성일 : 2025-09-11
  * 작성자 : 최원효
  * 설명 : java.util 패키지의 컬렉션 클래스 Stack의 특징)
  * 	1. jdk 1.0에서 추가된 컬렉션 클래스이다.
@@ -20,6 +20,7 @@ public class ListEx06 {
 		myStack.push("1-java");
 		myStack.push("2-oracle");
 		myStack.push("3-html");
+		
 		
 		while(!myStack.isEmpty()) {
 			

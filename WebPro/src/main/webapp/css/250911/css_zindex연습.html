@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>z-index연습</title>
+<style>
+
+/*
+	z-index ==> 요소가 출력되는 계층 번호를 지정한다.
+			계층 번호의 값이 클수록 앞쪽(위)에 배치된다.
+*/
+
+#one{
+	width:400px; height: 300px;
+	background-color: yellow;
+	position: absolute;
+	left: 350px;
+	top: 150px;
+	z-index: 2;
+}
+
+#two{
+	width:400px; height: 300px;
+	background-color: pink;
+	position: absolute;
+	left: 400px;
+	top: 200px;
+}
+</style>
+
+</head>
+<body>
+<div id="one">1번 div 영역</div>
+
+<div id="two">2번 div 영역</div>
+
+
+</body>
+</html>

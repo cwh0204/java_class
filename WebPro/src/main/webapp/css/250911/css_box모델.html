@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Box 모델</title>
+
+<style type="text/css">
+/*
+	- box모델에 margin과 padding이 적용되는 순서
+	예) margin : 값1 값2 값3 값4 ==> 상, 우, 하, 좌
+	   margin : 값1 값2 값3; 	  ==> 상, 좌우 ,하
+	   margin : 값1 값2 		  ==> 상하, 좌우
+	   margin : 값1;			  ==> 상하좌우
+	- 블록 요소의 box 모델을 가운데 정렬하기
+		==> margin의 좌우값을 auto로 설정한다.
+		예) margin : 값1 auto;
+		예) margin-left: auto;
+			margin-right: auto;
+*/
+#target1{
+	width:300px;
+	height: 50px;
+	background-color: yellow;
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px 20px 30px 40px;
+	text-align: center;
+}
+#target2{
+	width:300px;
+	height:50px;
+	background-color: lightgreen;
+	border: 1px solid black;
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+<p id="target1">이것은 P태그 영역입니다.<p>
+<div id="target2">이것은 Div태그 영역입니다.</div>
+</body>
+</html>
