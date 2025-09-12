@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flex박스 연습</title>
+
+<style>
+/*
+   - Flex Container 를 위한 속성들
+   1) display    ==> Flex Container를 정의한다.
+      속성값
+           - flex         ==> Block 특성의 Flex Container를 정의한다.
+           - inline-flex      ==> Inline 특성의 Flex Container를 정의한다.
+           
+   2) flex-direction ==> Items의 주 축을 설정한다.
+      속성값
+         - row   ==> 수평축(주축), 수직축(교차축)
+         - row-reverse
+         - column ==> 수직축(주축), 수평축(교차축)
+         - column-reverse
+         
+   3) flex-wrap ==> Items의 줄바꿈을 설정한다.
+      - nowrap ==> 줄바꿈 없이 한 줄에 모든 items를 표시한다.
+      - wrap   ==> 줄바꿈 허용
+      - wrap-reverse ==> 아래쪽부터 배치하면서 줄바꿈 허용
+   4) flex-flow ==> flex-direction 과 flex-wrap을 같이 나타내는 단축 속성.
+      예) flex-flow: row wrap 
+      
+   5) justify-content: 주 축을 기준으로 정렬하기
+      - flex-start    ==> Items를 시작점으로 정렬
+      - flex-end       ==> Items를 끝점으로 정렬.
+      - center        ==> Items를 가운데 정렬
+      - space-around  ==> 각 Item 좌우 여백을 고르게 정렬
+      - space-between ==> 첫 Item은 시작점, 마지막 Item은 끝점에 배치하고 
+                     나머지는 여백을 고르게 분배해서 정렬 
+      - space-evenly  ==> 모든 여백을 고르게 분배해서 정렬
+      
+   6) align-content  ==> 교차 축을 기준으로 정렬
+      - stretch ==> Container의 교차 축을 채우기 위해 Items를 늘린다.
+                  (단, Items들이 교차 축 방향으로 크기가 정해지지 않았을 때)
+      - flex-start    ==> Items를 시작점으로 정렬
+      - flex-end       ==> Items를 끝점으로 정렬.
+      - center        ==> Items를 가운데 정렬
+      - space-around  ==> 각 Item 좌우 여백을 고르게 정렬
+      - space-between ==> 첫 Item은 시작점, 마지막 Item은 끝점에 배치하고 
+                     나머지는 여백을 고르게 분배해서 정렬 
+      - space-evenly  ==> 모든 여백을 고르게 분배해서 정렬
+      
+   7) align-items      ==> 교차 축을 기준으로 정렬한다.
+                     (Items가 한 줄일 경우에 많이 사용한다.)
+                     (주의 : flex-wrap을 통해 2줄 이상일 경우에는 align-content 속성이 우선한다.)
+      
+      
+*/
+
+* { margin: 0; padding: 0;}
+
+.flex-container{
+   background-color: lightgreen;
+   height: 100vh;    /* vh: viewport의 비율 */
+}
+
+.flex-item{
+   color: #ffffff;
+   width: 80px;
+   height: 80px;
+   background-color: orange;
+   text-align:center;
+   border: 1px solid yellow;
+}
+
+.flex-container{
+   display: flex;
+   /* flex-direction: row;
+   flex-wrap: nowrap; 
+   justify-content: center;
+   justify-content: space-around;
+   justify-content: space-between;
+   align-content: flex-center;
+   */
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="flex-container">
+   
+   <div class="flex-item">1</div>
+   <div class="flex-item">2</div>
+   <div class="flex-item">3</div>
+   <div class="flex-item">4</div>
+   <div class="flex-item">5</div>
+   
+   <div class="flex-item">6</div>
+   <div class="flex-item">7</div>
+   <div class="flex-item">8</div>
+   <div class="flex-item">9</div>
+   <div class="flex-item">10</div>
+   
+   <div class="flex-item">11</div>
+   <div class="flex-item">12</div>
+   <div class="flex-item">13</div>
+   <div class="flex-item">14</div>
+   <div class="flex-item">15</div>
+   
+</div>
+
+
+</body>
+</html>

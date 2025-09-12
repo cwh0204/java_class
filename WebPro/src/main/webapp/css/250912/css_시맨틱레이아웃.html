@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>시멘틱 태그를 이용한 레이아웃</title>
+
+<style>
+
+* {
+   padding : 0px; margin: 0px;
+}
+
+body { 
+   min-width: 1000px;
+}
+
+header, aside, section, footer {
+   box-sizing: border-box;
+   border: 1px solid gray;
+   border-radius: 20px;
+   margin: 1px; padding: 2px;
+}
+
+header, footer {
+   height: 70px;
+   background-color: gold;
+}
+
+aside {
+   height: 500px;   
+   width: 20%;
+   background-color: cyan;
+}
+
+section {
+   height: 500px;
+   width: 59.4%;
+   background-color: lightpink;
+   float: left;
+}
+
+#left {
+   float: left;
+}
+
+#right{
+   float: right;
+}
+
+#footer {
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<header>Header</header>
+<aside id="left">aside(Left)</aside>
+<section>Section</section>
+<aside id="right">aside(Right)</aside>
+<footer>Footer</footer>
+
+</body>
+</html>

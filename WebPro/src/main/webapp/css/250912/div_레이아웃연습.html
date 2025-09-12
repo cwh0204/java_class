@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>div 레이아웃</title>
+
+<style>
+* { margin: 0; padding: 0; }
+
+body{
+   min-width: 1000px; 
+}
+
+/*
+
+   box-sizing : 요소의 크기를 계산할 때 width값의 범위를 정한다.
+      content-box (기본값) ==> width는 content(내용)이 출력되는 영역
+      border-box ==> width는 border 두께 + padding+content너비
+
+*/
+
+div{
+   box-sizing:border-box;
+   border: 1px solid gray;
+   margin: 1px;
+   padding: 2px;
+   border-radius: 10px;
+}
+
+#header, #footer{
+	height: 70px;
+	background-color: gold;
+}
+
+.main{
+	height: 500px;
+}
+
+#left, #right{
+	width: 20%;
+	background-color: cyan;
+}
+
+#center{
+	width: 59.43%;
+	background-color: pink;
+	float:left;
+}
+
+#left{
+	float:left;
+}
+
+#right{
+	float:right;
+}
+#footer{
+	clear:both;
+}
+</style>
+
+/*
+	스타일 속성값을 지정할 때 계산식을 사용할 때는 calc(계산식)
+*/
+
+</head>
+<body>
+
+<div id="header">Header</div>
+<div id="left" class="main">Left</div>
+<div id="center" class="main">Content</div>
+<div id="right" class="main">Right</div>
+<div id="footer">Footer</div>
+
+</body>
+</html>
