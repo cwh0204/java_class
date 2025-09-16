@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript">
+/* 
+ * 
+ 	제어문 ==> 프로그램의 흐름을 제어하는 명령
+ 	
+ 	
+ 1. 조건문 ==> if문, switch문
+ 	1) if문
+ 		if(조건식){
+ 			실행문1;
+ 			...
+ 		}
+ 		실행문2;
+ ------------------------------
+ 	if(조건식){
+ 		실행문1;
+ 		...
+ 	}else{
+ 		실행문2;
+ 		...
+ 	}
+ 	실행문3;
+ ------------------------------
+ 	if(조건식1){
+ 		실행문1;
+ 		...
+ 	}else if(조건식2){
+ 		실행문2;
+ 		...
+ 	}else{
+ 		실행문3;
+ 		...
+ 	}
+ 	실행문4;
+ 	
+ 
+ */
+/*  let num = prompt("숫자를 입력하세요.");
+ 
+ if(num > 0){
+	 console.log(num + "은 양수입니다");
+ } */
+
+ 
+/*  문제) 숫자 2개와 연산자 1개를 차례로 입력받아서 연산자에 맞는 계산 결과를 출력하는 프로그램을 작성하시오. (연산자는 +,-,*,/,% 중 하나만 입력한다.) */
+ let num1 = prompt("숫자를 입력해주세요?");
+ let num2 = prompt("두번째 숫자를 입력해주세요");
+ let col = prompt("연산자를 적어주세요");
+ if(col == "+"){
+	 console.log(parseInt(num1) + parseInt(num1));
+ }else if(col == "-"){
+	 console.log(parseInt(num1) - parseInt(num1));
+ }else if(col == "*"){
+	 console.log(parseInt(num1) * parseInt(num1));
+ }else if(col == "/"){
+	 console.log(parseInt(num1) / parseInt(num1));
+ }else if(col == "%"){
+	 console.log(parseInt(num1) % parseInt(num1));
+ }
+ 
+ console.log("이후의 실행문장")
+ 
+ /* 문제) 숫자 2개를 차례대로 입력받아서 큰 값과 작은값을 각각 출력하시오. */
+ 
+ let num3 = prompt("숫자를 입력해주세요?");
+ let num4 = prompt("두번째 숫자를 입력해주세요");
+ 	if(parseInt(num3) > parseInt(num4)){
+ 		console.log("큰값"+num3);
+ 		console.log("작은값"+num4);
+ 	}else{
+ 		console.log("작은값"+num3);
+ 		console.log("큰값"+num4);
+ 	}
+ 
+/*  문제) 점수를 입력 받고, 이 점수를 이용하여 학점을 구하시오.
+ 	(점수는 0 ~ 100점 사이를 정확히 입력한다.)
+ 	점수가
+ 		90이상 100이하면 A학점
+ 		80이상 90미만이면 B학점
+ 		70이상 80미만이면 C학점
+ 		60이상 70미만이면 D학점
+ 		60미만이면 F학점 */
+ let num5 = prompt("점수를 입력해주세요?");
+ let parNum5 = parseInt(num5)
+ if(parNum5 >= 90){
+	 console.log("A학점입니다");
+ }else if(parNum5 >= 80 && parNum5 <= 89){
+	 console.log("B학점입니다");
+ }else if(parNum5 >= 70 && parNum5 <= 79){
+	 console.log("C학점입니다");
+ }else if(parNum5 >= 60 && parNum5 <= 69){
+	 console.log("D학점입니다");
+ }else{
+	 console.log("F학점입니다");
+ }
+ 
+/*  문제) 두 사람의 가위 바위 보를 각각 입력받아서 판정 결과를 출력하시오.
+ 	결과예시)
+ 		첫번째 사람 : 가위
+ 		두번째 사람 : 보
+ 		결과 : 첫번째 사람 승 */
+ 	
+ let man = prompt("첫번째 사람가위바위보!!");
+ let man1 = prompt("두번째 사람가위바위보!!");
+ if(man == "바위" && man1 =="가위"){
+	 console.log("첫번째 사람"+man);
+	 console.log("첫번째 사람"+man1);
+	 console.log("첫번째 사람 승");
+ }else if(man == "가위" && man1 =="바위"){
+	 console.log("첫번째 사람"+man);
+	 console.log("첫번째 사람"+man1);
+	 console.log("두번째 사람 승");
+ }else if(man == "가위" && man1 =="보"){
+	 console.log("첫번째 사람"+man);
+	 console.log("첫번째 사람"+man1);
+	 console.log("첫번째 사람 승");
+ }else if(man == "보" && man1 =="가위"){
+	 console.log("첫번째 사람"+man);
+	 console.log("첫번째 사람"+man1);
+	 console.log("두번째 사람 승");
+ }else if(man == "바위" && man1 =="보"){
+	 console.log("첫번째 사람"+man);
+	 console.log("첫번째 사람"+man1);
+	 console.log("첫번째 사람 승");
+ }else if(man == "보" && man1 =="바위"){
+	 console.log("첫번째 사람"+man);
+	 console.log("첫번째 사람"+man1);
+	 console.log("두번째 사람 승");
+ }else{
+	 console.log("첫번째 사람"+man);
+	 console.log("첫번째 사람"+man1);
+	 console.log("비김");
+ }
+ 
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

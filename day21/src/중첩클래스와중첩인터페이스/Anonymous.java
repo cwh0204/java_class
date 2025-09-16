@@ -1,0 +1,44 @@
+package 중첩클래스와중첩인터페이스;
+
+/*
+ * 	Person 클래스를 활용한 익명객체 구현
+ */
+public class Anonymous {
+	//필드 초기값으로 대입
+	Person field = new Person() {
+		
+		void work() {
+			System.out.println("출근을 합니다.");
+		}
+		@Override
+		void wake() {
+			// TODO Auto-generated method stub
+			System.out.println("6시에 일어납니다.");
+			work();
+		}
+		
+	}; //첫번째 익명클래스(외부클래스명$번호.class -> Anonymous$1.class
+	
+	void method() {
+		Person localVar = new Person() {
+			
+			void walk() {
+				System.out.println("산책을 합니다");
+			}
+			
+			@Override
+			void wake() {
+				// TODO Auto-generated method stub
+				System.out.println("8시에 일어납니다.");
+				walk();
+			}
+			localVar.wake();
+		};//두번째 익명클래스(외부클래스명$번호.class -> Anonymous$2.class)
+	}
+	
+	void method02(Person person) {
+		Person person1 = new Person();
+		person1.wake();
+	}
+	
+}

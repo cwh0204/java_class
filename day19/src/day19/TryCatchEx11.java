@@ -18,7 +18,6 @@ public class TryCatchEx11 {
 			System.out.println(4);
 		}
 		System.out.println(5);
-		
 	}
 
 }
