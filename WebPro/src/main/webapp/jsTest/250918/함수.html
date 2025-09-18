@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+/*
+ * 	함수 ==> 특정 기능을 가진 단위 프로그램
+ *			(한가지 목적을 달성하기 위해 작성된 코드들의 집합)
+ * 	- 함수의 종류
+ *	1) 내장함수 ==> 프로그래밍 언어에서 제공하는 함수
+ *	(1) eval(수식문자열);
+ *		==> 주어진 '수식문자열'을 계산 가능한 식으로 변환 후 처리한 결과를 반환한다.
+ */
+ 
+ /* let str ="(100/4+5)/5"
+ let ex = (100/4+5);
+ 
+ console.log("str = "+str);
+ console.log("ex = "+ex);
+ console.log("str = "+eval(str));
+  */
+ 
+ /* (2) 문자열을 숫자로 변환하는 함수들...
+ *	- parseInt(문자열, 진수);
+ *	==> '문자열'을 정수형 숫자로 변환한다. (문자열 대신 숫자도 가능)
+ *	==> '진수'에는 10, 2, 8, 16을 사용할 수 있고 기본값은 10이다.
+ */
+ 
+/*  console.log("123.45 =>" + parseInt("123.45"));
+ console.log("123.45 =>" + parseInt(123.45));
+ console.log("123.45 =>" + parseInt("123a45"));
+ console.log("123.45 =>" + parseInt("a12345"));
+ 
+ 
+ console.log(parseInt("100",2));
+ console.log(parseInt("128",8));
+ console.log(parseInt("2a",16)); */
+ 
+ //-------------------------------------------------------------------------
+
+ /*  	- parseFloat(문자열);
+ 		==> 문자열을 실수형 숫자로 변환한다. */
+ 
+/*  console.log(parseFloat("123.45"));
+ console.log(parseFloat("123.4a5")); */
+ 
+ /* 
+ 	(3) 숫자 여부를 판단하는 함수들...
+ 	- isFinaite(값);
+ 			=> '값'이 유한수(숫자)이면 true, 문자면 false
+ 	- isNaN(값);
+ 			==> '값'이 숫자면 false, 문자면 true
+ */
+ /* console.log(isFinite("123.45"));
+ console.log(isFinite("12a345"));
+ 
+ console.log(isNaN("123.45"));
+ console.log(isNaN("12a345"));
+ */
+ /*
+ *	2) 사용자 정의 함수 => 사용자(프로그래머)가 만든 함수
+ 	
+ 	-함수 정의 ==> 함수를 작성하는 것
+ 	형식1) 함수 선언문
+ 		function 함수명(파라미터변수들...){
+ 			처리할 내용들;
+ 			...
+ 			return 반환값;
+ 		}
+ 	형식2) 함수 표현식
+ 		const 함수명 = function(파라미터변수들...){
+ 			처리할 내용들;
+ 			...
+ 			return 반환값;
+ 		}
+ 	형식3) Function 생성자 함수 이용하기 ==> 거의 사용 안함 ==> 생략...
+ 	
+ 	형식4) 화살표 함수 
+ 		const 함수명 = (파라미터 변수들) => {
+ 			처리할 내용들;
+ 			...
+ 			return 반환값;
+ 		}
+ 	-함수 호출
+ 		==> 함수 영역으로 제어가 이동되어 함수의 처리 내용들이 실행되도록 하는 것
+ 	
+ 	1) 파라미터 변수가 없고, 반환값도 없는 함수 호출
+ 		함수명();
+ 	
+ 	
+ 	
+ *	
+ */
+ 
+ 	/* const a = (a,b) => {
+ 		console.log("함수실행"+(a+b));
+ 	}
+ 	
+ 	const b = () => {
+ 		console.log("기본생성자");
+ 	}
+ 	
+ 	const c = () => {
+ 		return "반환값 생성자";
+ 	}
+ 	
+ 	const d = () => {
+ 		
+ 		console.log("d 생성자");
+ 		
+ 		const e =()=>{
+ 			console.log("메서드1");
+ 		}
+ 		const f =()=>{
+ 			console.log("메서드2");
+ 		}
+ 		return{e,f};
+ 	}
+ 	
+ 	b();
+ 	a(1,3);
+ 	console.log(c());
+ 	
+	const myClass = d();
+	
+	myClass.e();
+	myClass.f(); */
+	
+	/*
+		문제) 사용자로부터 단을 입력 받아서 구구단 중 입력한 단에 해당하는 구구단을 출력하는 프로그램을 작성하시오
+		(단, 해당 단을 출력하는 부분은 함수로 작성하시오.)
+	*/
+		
+	/*
+		문제) 두 수를 파라미터로 받아서 작은 수부터 큰 수까지의 합계를 반환하는 함수를 작성하시오.
+		
+	*/
+	
+	/*
+		문제) 년도를 매개변수로 받아서 해당 년도가 '윤년'인지 '평년'인지 판정하는 함수를 작성하시오
+			(조건) 윤년은 4년에 한번씩 있고, 100년에 한번씩 다시 평년이 된다.
+			그리고 400년에 한번씩 윤년이된다.
+	*/
+		let num1 = parseInt(prompt("출력할 단을 입력해주세요"));
+		let num2 = parseInt(prompt("작은수를 입력해주세요"));
+		let num3 = parseInt(prompt("큰수를 입력해주세요"));
+ 		
+		const quize = () => {
+ 			
+ 			const sumNum = (num2,num3) =>{
+				let sum = 0;
+				
+				if(num2 == null && num3 == null){
+					let num2 = parseInt(prompt("작은수를 입력해주세요"));
+					let num3 = parseInt(prompt("큰수를 입력해주세요"));
+					for(i=num2; i <= num3; i++){
+						sum+= i;
+					}
+				}else{
+					for(i=num2; i <= num3; i++){
+						sum+= i;
+					}
+				}
+				console.log(sum);
+			}
+ 			
+			const gogoDan = (num1) =>{
+				for(i = 1; i<=9; i++){
+					console.log( num1+" * "+i+" = "+(num1*i))
+				}
+			}
+			
+			const year = (num4) =>{
+				if(num4 % 4 == 0){
+					
+				}
+			}
+			return {sumNum, gogoDan};
+		}
+ 		
+		quize1 = quize();
+		quize1.gogoDan(num1);
+		quize1.sumNum()
+/* 		quize1.sumNum(num2, num3) */
+</script>
+</head>
+<body>
+
+</body>
+</html>
