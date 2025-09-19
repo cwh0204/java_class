@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+<script>
+
+/* 
+ *    -화살표 함수
+ *      ==> 함수 표현식을 간단하게 나타낸 모양.
+       
+ 함수 표현식으로 함수 정의
+ const 함수명 = function(파라미터 변수들...) {
+    처리할 내용들;
+    ...
+    return 반환값;
+ }
+ 
+ 함수 표현식을 화살표 함수로 나타내기
+ 
+ const 함수명 = (파라미터 변수들) => {
+    처리할 내용들;
+    ...
+    return 반환값;
+ }
+ 
+ 
+    - 화살표 함수를 정의하는 규칙
+ 1) 파라미터 변수가 1개일 경우에는 소괄호('()')를 생략 가능.
+ 2) 파라미터 변수가 없거나 2개 이상일 경우에는 소괄호를 생략 가능.
+ 3) 처리할 내용이 하나일 경우에는 중괄호 ('{}')를 생략 가능.
+ 4) 처리할 내용이 return문 하나일 경우에는 중괄호와 return을 같이 생략 가능.
+ 5) 처리할 내용이 2개 이상일 경우에는 중괄호를 생략 불가능.
+ 6) 반환값이 '객체 리터럴'이면 '객체 리터럴'을 소괄호로 묶어줘야 한다.
+ 
+ */
+ 
+ const test1 = function(name, age) {
+    console.log("나이가 " + age + "세 인" + name + "씨. 안녕하세요.");
+ }
+ 
+ test1("홍길동", 30);
+ 
+ // 1번 규칙
+ 
+ const test2 = name => { console.log(name + "씨 반가워요"); }
+ test2("이순신");
+ 
+ // 2번 규칙
+ 
+ const test3 = (name, age) => { console.log("나이가 " + age + "세인 " + name + "씨. 안녕하세요."); }
+ test3("변학도", 33);
+ 
+ const test4 = () => { console.log("ㅎㅇ~"); }
+ test4();
+ 
+ //3번 규칙
+ 
+ const test5 = () => { console.log("ㅎㅇ~"); }
+
+ test5();
+ 
+ //4번 규칙
+ const test6 = (a, b) => { return a+b; }
+ const test7 = (a, b) => a + b;
+ 
+ console.log( test6(100, 200));
+ console.log( test7(70, 80));
+ 
+    
+   /*
+   *   콜백(callback) 함수 ==> 다른 함수의 인자로 전달되는 함수로 해당 함수에서 호출되어 실행되는 함수를 말한다.
+      
+         ==> 자바스크립트의 콜백함수는 배열처리나 비동기작업(이벤트 처리, Ajax 처리)등에서 자주 사용된다.
+         ==> 콜백함수는 작성할 때 주로 익명함수, 화살표 함수를 이용해서 작성한다.
+   */
+   
+function insa(name){
+      console.log(`${name}씨 안녕하세요.`);
+         }
+         
+insa("홍길동");
+
+function inputUserName( callback ){
+   const name = prompt("이름을 입력하세요.");
+   callback(name);
+} 
+
+
+
+inputUserName( insa );
+
+inputUserName( function(data) { //function에 이름이 없으면 익명 함수.
+   console.log(`${data}씨 반갑습니다.`);
+})
+
+inputUserName();
+   
+</script>
+</head>
+<body>
+
+</body>
+</html>

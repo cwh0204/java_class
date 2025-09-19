@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	/*
+	 *  객체 ==> 속성과 메서드로 구성된 데이터의 집합체.
+	 - 속성 : 객체의 데이터를 저장하는 전용 변수를 말한다.
+	 - 메서드 : 객체의 기능을 구현한 전용 함수를 말한다.
+	
+	 1) 클래스 생성자 함수 작성
+	 function 클래스명(파라미터 변수들...){
+	 this.속성명;  //속성 선언
+	 this.속성명 = 값; //속성 선언+초기화
+	
+	 ...
+	
+	 this.메서드명 = function(파라미터변수들...){
+	 처리할 내용들;
+	 ...
+	 return 반환값;
+	 }
+	 ....
+	 }
+	
+	
+	 - 메서드 추가하는 방법2
+	 형식) 클래스명.prototype.메서드명 = function(파라미터 변수들...){
+	 처리할 내용들;
+	 ...
+	 return 반환값;
+	 }ㅋ
+	
+	
+	 2) 객체(인스턴스 생성) 및 사용하기
+	 const 객체 변수 = new 클래스명(값들...);   ==> 객체 생성
+	
+	
+	
+	 속성 사용하기.
+	
+	 개체변수.속성명 = 값;  ==> 속성에 값을 대입.
+	 변수 = 객체변수.속성명 ==> 속성값 읽어오기.
+	
+	
+	
+	 -메서드 호출
+	 객체변수.메서드명(값들...);
+	
+	 객체변수.속성명 === 객체변수["속성명"]
+	 객체변수.메서드명(값들...) === 객체변수["메서드명"](값들...);
+	
+	 */
+
+	//생성자 함수 작성
+	/* function Human(name, age) {
+	   this.name = name;
+	   this.age = age;
+	   this.addr;
+	   this.tel;
+	   
+	   this.setName = function(name) {
+	      this.name = name;
+	   }
+	   
+	   this.getName = function(){
+	      return this.name;
+	   }
+	   
+	   this.setAddr = function(addr){
+	      this.addr = addr;
+	   }
+	   
+	   this.setTel = function(tel){
+	      this.tel = tel;
+	   }
+	}
+	
+	// prototype으로 메서드 추가하기.
+	Human.prototype.displayData - function() {
+	   console.log("객체의 속성 정보 출력");
+	   console.log("이 름 : " + this.name);
+	   console.log("나 이 : " + this.age);
+	   console.log("주 소 : " + this.addr);
+	   console.log("전 화 : " + this.tel);
+	   console.log("----------------------------")
+	}
+	
+	 */
+
+
+	/* const myCar = {
+		 model : "k7",
+		 speed : 60,
+		 color : "red",
+		 
+		 brake: function(){this.speed-=10;},
+		 accel: function(){this.speed+=10;},
+	}
+	
+	myCar.accel();
+	console.log("모델 : " + myCar.model);
+	console.log("색상 : " + myCar.color);
+	console.log("모델 : " + myCar['speed']);
+	
+	myCar.brake();
+	console.log("모델 : " + myCar['speed']); */
+	function Human(name, age) {
+		this.name = name;
+		this.age = age;
+		this.addr;
+		this.tel;
+
+		this.setName = function(name) {
+			this.name = name;
+		}
+
+		this.getName = function() {
+			return this.name;
+		}
+
+		this.setAddr = function(addr) {
+			this.addr = addr;
+		}
+
+		this.setTel = function(tel) {
+			this.tel = tel;
+		}
+	}
+	lee.nickName = "날쌘돌이";
+	lee.newMethod = function() {
+		console.log("이름 : " + this.name);
+		console.log("별명 : " + this.name);
+	};
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
