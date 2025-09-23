@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for~in 명령, for~of 명령</title>
+<script type="text/javascript">
+	/*
+	 * 	-for ~ in 명령
+	 ==> 개체가 가지고 있는 속성과 메서드 개수만큼 반복 처리하는 명령
+	 형식) for(let 변수 in 객체변수){
+	 반복할 내용들;
+	 ...
+	 }
+	 ==> '객체변수'가 가지고 있는 '속성이름' 또는 '메소드이름'을 문자열 형태로 '변수'에 저장한 후 반복할 내용들을 처리하고,처리가 끝나면
+	 다른 '속성이름' 이나 '메서드이름'을 다시 '변수'에 저장하고 처리하는 작업을 계속 수행한다. (배열은 속성이름 대신 'index값'이 저장된다.)
+	
+	 -for ~ of 명령
+	 ==> 열거가 가능한 객체의 데이터 개수만큼 반복 처리하는 명령
+	 형식) for(let 변수 of 열거가가능한객체){
+	 반복한 내용들;
+	 ...
+	 }
+	 ==> '열거가가능한객체'가 가지고 있는 '데이터'를 '변수'에 저장한 후 '반복할 내용들'을 처리하고
+	 처리가 끝나면 다음 데이터를 가지고 계속 수행한다.
+	 (일반 객체는 사용 할 수 없고, 주로 배열에서 사용한다.)
+	 */
+	function Car(col, num) {
+		this.color = col;
+		this.number = num;
+		this.display = function() {
+			console.log("차의 색깔 : " + this.color);
+			console.log("차의 색깔 : " + this.number);
+		}
+	}
+
+	const myCar = new Car("파랑", "1234567");
+	function test() {
+
+	}
+	// typeof 값 ==> "값"의 타입(자료형)을 문자열로 나타낸다.
+	/*  console.log(typeof "가나다라");
+	 console.log(typeof 123);
+	 console.log(typeof test);
+	 console.log(typeof myCar);
+	 */
+/* 	for ( let temp in myCar) {
+		//	console.log("temp" + temp);
+		//	console.log("typeof temp=>" + typeof temp);
+		if(myCar[temp] == 'function'){ //메서드 여부 검사
+			console.log("------------------------------");
+			console.log(temp + "메서드 호출");
+			myCar[temp]();	//메서드 호출
+			console.log("------------------------------");
+		}else{
+			//속성값 출력
+			console.log(temp + " : " + myCar[temp]);
+		}
+	} */
+	
+	const str = ["홍길동","이순신","강감찬","을지문덕"];
+	for(let index in str){
+		console.log(index,str[index]);
+	}
+	
+	for(let name of str){
+		console.log(name);
+	}
+	
+	for(let i = 0; i < str.length; i++){
+		console.log(i + " ==> " + arr[i]);
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
