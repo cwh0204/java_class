@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+	/*
+	 * 		Math객체 ==> 수학 계산용 객체 (정적 객체)
+	 *	-속성
+	 *		Math.PI ==> 3.141592 (원주율)
+	 Math.E  ==> 2.718 (오일러 상수)
+	
+	 -메서드
+	 Math.max(값1 , 값2 , 값3, ...); ==>값들 중에서 제일 큰 값 반환
+	 Math.min(값1 , 값2 , 값3, ...); ==>값들 중에서 제일 작은 값 반환
+	
+	 Math.pow(x,y);	==> x의 y승
+	 Math.sqrt(값); ==> '값' 의 제곱근
+	 Math.round(값);	==> '값'의 소수점 첫째자리에서 반올림
+	
+	 Math.floor(값);	==>	'값'과 같거나 작은 정수들 중에서 제일 큰 값
+	
+	 Math.ceil(값);	==> '값'과 같거나 큰 정수들 중에서 제일 작은 값
+	
+	 Math.random(); ==> 0이상 1미만 사이의 난수를 발생한다.
+	
+	 -최소값 ~ 최대값 사이의 정수형 난수 만들기
+	 Math.floor(Math.random() * (최대값 - 최소값 + 1) + 최소값 );
+	 parseInt(Math.random() * (최대값 - 최소값 + 1) + 최소값 );
+	 */
+
+	/*  console.log(Math.PI);
+	 console.log(Math.E);
+	
+	 console.log(Math.max(10,50,80,70));
+	 console.log(Math.min(10,50,80,70));
+	
+	 console.log(Math.pow(2,3));
+	 console.log(Math.sqrt(25));
+	 console.log(Math.round(123.456));
+	
+	 console.log(Math.floor(3.4));
+	 console.log(Math.ceil(3.4));
+	
+	 console.log(Math.random()*6); */
+
+	/* 문제) 1~10 사이의 난수를 발생한 후 사용자가 이 값을 맞추는 프로그램을 작성하시오. */
+	/*   const num2 = parseInt(Math.random()*10);
+	 console.log(num2);
+	 for(;;){
+	 const num1 = prompt("숫자를 입력해주세요?");
+	 if(num1 == num2){
+	 break;
+	 }
+	 } 
+	
+	 문제) 가위 바위 보 게임 프로그램을 작성하시오.
+	 (컴퓨터의 가위 바위 보는 난수를 이용해서 정하고, 사용자의 가위 바위 보는
+	 입력 받아서 처리한다.		
+	 )
+	
+	 */
+	/* const com = parseInt(Math.random() * 3);
+	const coms = ["가위","바위","보"];
+	let player = prompt("가위 바위 보!!");
+	
+	console.log("사용자 : " + player);
+	console.log("컴퓨터 : " + coms[com]);
+	if(player == coms[com]){
+		console.log("비겻습니다");
+	}else if(player == "가위" && com == "보" || player == "바위" && com == "가위" || player == "보" && com == "바위"){
+		console.log("이겻습니다");
+	}else{
+		console.log("졋습니다");
+	} */
+	
+/* 	문제) 로또번호 만들기
+		( 1 ~ 45 사이의 중복되지 않는 난수를 6개 만들기) */
+
+const roto = new Array();
+
+for(let i = 0; i<=5; i++){
+	roto[i] = parseInt(Math.random()*45+1);
+	if(true){
+		roto.some(roto[i])
+	}
+}
+console.log(roto);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

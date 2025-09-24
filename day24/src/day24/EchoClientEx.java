@@ -79,7 +79,7 @@ public class EchoClientEx {
 	}// 생성자 오버로딩
 
 	public static void main(String[] args) {
-		new EchoClientEx("192.168.42.52");
+		new EchoClientEx("192.168.142.35");
 		/*
 		 * 생성자 인자값으로 서버 ip주소가 들어간다. localhost는 모든 내 자신 컴퓨터를 의미하는 호스트이름이다. 127.0.0.1은 모든
 		 * 내자신 컴퓨터를 의미하는 ip주소이다. 결국 내 자신 컴퓨터가 채팅프로그램이고 서버이고 클라이언트가 되는 것이다. 과제물)1팀2팀 각
