@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import net.daum.dto.BoardDTO;
+
 // TODO Auto-generated method stub
 /* 고객목록 보기)
  * JDBC 쿼리문 수행하는 Statement API를 사용한다. select 문 수행
@@ -46,6 +48,9 @@ public class Customer_Select01 {
 		Statement stmt = null;//쿼리문 수행 stmt
 		ResultSet rs = null;//검색 결과 레코드를 저장할 rs
 		String sql = null;//쿼리문 저장 변수
+		
+		BoardDTO and = new BoardDTO();
+		
 		
 		try {
 			Class.forName(driver);//오라클 jdbc드라이버클래스 로드

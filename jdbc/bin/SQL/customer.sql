@@ -115,4 +115,29 @@ delete from customer
 where cus_no = 5;
 
 select * from customer;
+
+-- tbl_border 테이블 생성 설계
+
+CREATE TABLE tbl_board(
+    bno number(38) primary key,
+    bname varchar2(200) not null,
+    btitle varchar2(200) not null,
+    bcont varchar2(4000) not null,
+    bdate date
+);
+
+select * from tbl_board order by bno desc;
+
+commit;
+
+--bno_seq 시퀀스 생성
+
+create sequence bno_seq
+start with 1
+increment by 1
+NOCACHE
+nocycle;
+
+select bno_seq.nextval as "다음시퀀스번호" from dual;
+
 commit;

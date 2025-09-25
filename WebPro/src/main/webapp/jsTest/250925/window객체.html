@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+/*
+ * 	BOM(Browser object Model) ==> 웹브라우저에서 제공하는 객체
+ 
+ window 객체 ==> BOM 중 최상위 객체
+			==> 'window'라는 이름으로 생성되어 있고,
+				이 객체의 멤버들을 사용할 때는 'window'를 생략할 수 있다.
+	- 속성
+		opner ==> 자식 창에서 부모 창을 가리키는 객체(window 객체와 같다.)
+	- 메서드
+		1. open() ==> 새 창을 만들어 준다.
+		형식)
+			변수 = window.open("문서명 또는 URL 주소", "창이름", "창속성");
+				- '창이름'이 같으면 새로운 창이 만들어지지 않고 이미 만들어진 '창이름'이
+				  같은 창에 내용들이 나타난다.
+				- '창속성'은 창의 크기, 새 창이 나타날 위치 등을 지정한다.
+				  예) "width=400, height=300, left=200, top=100"
+				- 지정된 '변수' 에는 새 창(자식 창)을 가리키는 객체
+		2. close() ==> 창을 닫는다.
+		형식) window.close();
+				close();
+				self.close();	==> 위의 3가지 명령은 모두 현재 창을 닫아준다.
+				
+				변수.close();		==> 부모 창에서 '변수' 가 가리키는 자식 창을 닫아준다.
+				
+		3. 시간변수 = setTimeout(처리할함수, 시간);
+				==> 주어진 '시간'이 경과하면 '처리할함수'를 실행한다.
+				==> '시간'은 밀리세컨드 단위를 사용한다.
+			clearTimeout(시간변수);
+				==> setTimeout의 기능을 해제한다.
+ */
+// 우리가 미리 공부했던 alert(), prompt(), confirm()은 window 객체의 메서드이다. 
+/*  window.alert("안녕하세요!!!");
+ alert("안녕하세요??"); */
+ 
+ let mywin = null;
+ 
+ function newOpen(){
+	 mywin = window.open("subWin.html", "", "width=400, height=300, left=400, top=200");
+ }
+ function newOpen1(){
+	 mywin = window.open("subWin.html", "");
+ } 
+ 
+ function closeChild(){
+	 if(mywin!=null){
+		 mywin.close();
+		 mywin = null;
+	 }else{
+		 alert("닫을 자식창이 없습니다!")
+	 }
+ }
+ let time = null;
+ 
+ timeoutTest = () => {
+	 /* setTimeout(newOpen, 1000); */
+	 setTimeout(() => {
+		 mywin = window.open("subWin.html", "", "width=400, height=300, left=400, top=200");
+	 },1000);
+ }
+ 
+ intervalTest = () =>{
+	 time = setInterval( () => {
+		 window.open("subWin.html", "", "width=400, height=300, left=400, top=200");
+	 },1000);
+ }
+</script>
+
+
+</head>
+<body>
+<input type="button" value="새창만들기" onClick="newOpen()">
+<input type="button" value="새창만들기2" onClick="newOpen1()">
+<input type="button" value="자식창닫기" onClick="closeChild()">
+<input type="button" value="5초후에 새창만들기" onClick="timeoutTest()">
+<input type="button" value="1초마다 새창만들기" onClick="intervalTest()">
+</body>
+</html>

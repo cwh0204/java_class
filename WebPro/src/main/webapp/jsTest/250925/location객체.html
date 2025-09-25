@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+/* 	location 객체 ==> 문서가 지정된 위치에 대한 정보를 관리하는 객체 
+ * 	URL 주소:
+	 	https://www.ddit.or.kr:9090/main/index.html#one?name=hong&age=30
+	 			
+	-속성
+		protocol : https
+		hostname : www.ddit.or.kr
+		port	 : 9090
+		host	 : www.ddit.or.kr:9090
+		
+		pathname : main/index.html
+		hash	 : #one
+		search	 : ?name=hong&age=30
+		
+		href ==> URL 전체 주소
+		
+ */
+ test = () =>{
+/* 	 console.log("href", location.href);
+	 console.log("protocol", location.protocol);
+	 console.log("hostname", location.hostname);
+	 console.log("port", location.port);
+	 console.log("host", location.host);
+	 console.log("pathname", location.pathname);
+	 console.log("hash", location.hash);
+	 console.log("search", location.search); */
+	 
+/* 	 location.href = "window객체.html";
+	 location.assign("window객체.html"); */
+/* 	 location.replace("window객체.html"); */
+ 	 location.reload();
+	 
+ }
+ 
+</script>
+
+</head>
+<body>
+
+<a href="location객체.html?name=hong&age=30#one">현재문서 다시 열기</a>
+<br><hr coler="red"><br>
+
+<input type="button" value="확 인" onclick="test()">
+
+</body>
+</html>

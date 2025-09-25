@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<style type="text/css">
+
+div{
+	border: 1px solid red;
+}
+</style>
+
+<script type="text/javascript">
+
+test = () =>{
+	// id속성값으로 대상 찾기
+	const myDiv = document.getElementById("testId");
+	
+/* 	alert(myDiv.innerHTML);
+	alert(myDiv.textContent);
+	 */
+/* 	myDiv.insertAdjacenHTML = ("beforebegin","<h3>반갑습니다. beforebegin</h3>"); */
+ 	
+/*  	-찾은 엘리먼트에 style을 자바 스크립트로 설정하는 방법
+ 	형식) E.style.스타일속성명 ="스타일 속성값"; */
+ 	
+ 	myDiv.style.color="red";
+	myDiv.style.backgroundColor = "yellow";
+ 	
+}
+
+</script>
+</head>
+<body>
+
+<h2>DOM 요소 찾기 연습</h2>
+<form action="">
+	<input type="button" value="연습" onclick="test()">
+</form>
+
+<div id ="testId">여러분 <span> 안녕하세요 </span><span> 반갑습니다. </span></div>
+
+
+</body>
+</html>

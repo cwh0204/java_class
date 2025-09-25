@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+/*
+ *  DOM(Document Object Model)
+ 
+ -주요 속성
+ 	1. nodeName : 노드 이름
+ 		(Document => #document, Text => #text, Element => 태그이름)
+ 	
+ 	2. nodeValue : 노드의 값
+ 		(Document => null, Text=> null, Element => 문자열(내용))
+ 	
+ 	3. nodeType  : 노드의 종류
+ 		(Element => 1, Attribute => 2, Text =>3 Comment => 8, Document > 9)
+ 	
+ 	4. parentNode : 현재 노드의 부모 노드를 나타낸다.
+ 	5. childNodes : 현재 노드의 자식 노드 목록을 나타낸다.
+ 					==> nodeList : 배열 형식의 자료구조로 되어 있다.
+ 	6. firstChild : 자식 노드들 중에서 첫번째 자식 노드를 나타낸다. ( childNodes[0])
+ 	7. lastChild  : 자식 노드들 중에서 마지막번째 자식 노드를 나타낸다.
+ 	
+ 	8. previousSibling ==> 형제 노드들 중에서 현재 노드의 바로 앞에 있는 노드
+ 	9. previousElementSibling => Element만 대상으로 현재 노드 바로 앞에 있는 노드
+ 	
+ 	10. nextSibling ==> 형제 노드들 중에서 현재 노드 바로 뒤에 있는 노드
+ 	11. nextElementSibling ==> Element만 대상으로 현재 노드 바로 뒤에 있는 노드
+ 
+ - document 객체의 주요 속성 및 메서드
+ 	1. document.documentElement => 문서의 루트 엘리먼트를 나타낸다.
+ 									(<html>태그 즉, HTML엘리먼트)
+ 
+ 	2. document.getElementById("id속성값")
+ 		==> id속성을 요소 찾기(찾는 대상이 1개이다.)
+ 	   document.getElementsByTagName("태그이름")
+ 	    ==> '태그이름'으로 요소 찾기 (찾는 대상이 0개 이상이다.)
+ 	    ==> 찾아진 요소들을 nodeList에 담아서 반환한다.
+ 	   document.getElementsByName("name속성값")
+ 	   	==> name 속성으로 요소 찾기 (찾는 대상이 0개 이상)
+ 	    ==> 찾아진 요소들을 nodeList에 담아서 반환한다.
+ 	   document.getElementsByClassName("class 속성앖");
+ 	    ==> class 속성으로 요소 찾기 (찾는 대상이 0개 이상)
+ 	    ==> 찾아진 요소들을 nodeList에 담아서 반환한다.
+ 	   
+ 	   document.querySelector("selector식");
+ 	    ==> css에서의 'selector'식을 이용해서 요소 찾기
+ 	    ==> 찾아진 요소가 여러개이면 그 중 첫번째 요소 하나를 찾는다.
+  	   document.querySelectorAll("selector식");
+ 	    ==> css에서의 'selector'식을 이용해서 요소 찾기
+ 	    ==> 모든 대상을 전부 찾는다
+ 	3. document.createElement("태그명")
+ 		==> '태그명'에 해당하는 Element객체를 생성한다.
+ 	   document.createTextNode("문자열");
+ 		==> '문자열'을 값을 갖는 text 노드를 생성
+ 
+ - Element 객체의 주요 속성 및 메서드
+ 	1. E.tagName
+ 		==> 해당 엘리먼트의 '태그명'을 나타낸다.
+ 	2. E.innerHTML
+ 		==> 해당 엘리먼트의 내용을 'HTML형식'으로 읽어오거나
+ 			'HTML형식'의 문자열을 해당 엘리먼트의 내용을 설정한다.
+ 	   E.textContent
+ 	   	==> 해당 엘리먼트의 내용 중 text만 읽어오거나 설정한다.
+ 	   	
+ 	3. E.getAttribute("속성명")
+ 	   	==> 해당 엘리먼트의 '속성명' 에 설정된 '속성값'을 읽어온다.
+ 	   E.setAttribute("속성명", "속성값")
+ 	   	==> 해당 엘리먼트의 '속성명'에 '속성값'을 설정한다.
+ 	   E.removeAttribute("속성명")
+ 	   	==> 해당 엘리먼트에 있는 '속성명'에 해당하는 속성을 삭제한다.
+ 	4. E.insertBefore(새로운노드, 기준노드)
+ 		==> 현재 노드의 자식 노드들 중에서 '기준노드'의 앞쪽에 '새로운노드'를 추가한다.
+ 	   E.appendChild(새로운 노드)
+ 	   	==> 현재 노드의 마지막 자식노드로 '새로운노드'를 추가한다.
+ 	   E.replaceChild(새로운노드, 이전노드)
+ 	   	==> 현재 노드의 자식 노드들 중에서 '이전노드'를 '새로운노드'로 교체(변경)한다.
+ 	   E.removeChild(삭제할노드)
+ 	   	==> 현재 노드의 자식 노드들 중에서 '삭제할노드'를 삭제한다.
+ 	   E.remove()
+ 	   	==> 현재 노드를 삭제한다.
+ 	
+ 	 5. E.insertAdjacentHTML(위치, HTML 코드)
+ 	 		==> '위치'에 맞는 위치에 'HTML 코드'를 추가한다.
+ 	 		==> '위치' : (beforebegin, afterbegin, beforeend, afterend)
+ 	 		
+ 	 		beforebegin
+ 	 		<태그명>
+ 	 		afterbegin
+ 	 			<자식태그명1>내용</자식태그명1>
+ 	 			...
+ 	 			<자식태그명1>내용</자식태그명n>
+ 	 		beforeend
+ 	 		</태그명>
+ 	 		afterend
+ 	 6. 아래의 명령은 'E'엘리먼트의 자손영역에서 검색하여 대상을 찾는다.
+ 	 	E.getElementsByTagName("태그이름")
+ 	 	E.getElementsBy
+ 	 		
+ */
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
