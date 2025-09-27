@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<style>
+body{
+	text-align: center;
+}
+table {margin : 0 auto;}
+.man {background-color: yellow;}
+.com {background-color: cyan;}
+
+</style>
+
+<script type="text/javascript">
+/*
+ *  '게임시작' 버튼을 누르면 컴퓨터와 가위 바위 보를 진행하는 프로그램이 진행된다.
+ 
+ 	컴퓨터의 가위 바위 보는 난수를 이용하고
+ 	사람의 가위 바위 보는 prompt로 입력 받아서 처리한다.
+ 	
+ 	사람과 컴퓨터의 가위 바위 보 정해지면 이미지가 변경되고
+ 	승패 결과는 id속성값이 'result'인 곳에 출력되도록 한다.
+ */
+
+</script>
+
+</head>
+<body>
+<form>
+	<input type="button" value="게임시작" id="startBtn">
+</form>
+	<table>
+		<tr>
+			<td class="man">사 람</td>
+			<td class="com">컴퓨터</td>
+		</tr>
+		<tr>
+			<td><img src="../../images/바위_좌.PNG" name="manImg"></td>
+			<td><img src="../../images/바위_우.PNG" name="comImg"></td>
+		</tr>
+		<tr>
+			<td colspan="2" id="result"></td>
+		</tr>
+	</table>
+</body>
+</html>

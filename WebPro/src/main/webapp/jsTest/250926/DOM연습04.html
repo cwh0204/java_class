@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+
+<script type="text/javascript">
+
+const secontTr = document.getElementsByTagName("tr");
+sum = 0;
+calc = () => {
+	for(let i = 1; i<secontTr.length; i++){
+		const tdList = secontTr[i].querySelectorAll("td");
+		
+		for(let j=2; j<=tdList.length - 1; j++){
+			sum += Number(tdList[j].textContent);
+			console.log(sum);
+		}
+		
+		tdList[tdList.length-1].innerHTML = sum;
+	}
+}
+
+</script>
+
+<body>
+	<table border="1">
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+			<th>국어</th>
+			<th>영어</th>
+			<th>수학</th>
+			<th>총점</th>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>홍길남</td>
+			<td>100</td>
+			<td>95</td>
+			<td>90</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>홍길서</td>
+			<td>100</td>
+			<td>95</td>
+			<td>90</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길북</td>
+			<td>100</td>
+			<td>95</td>
+			<td>90</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<input type="button" value="총점 추가" onclick="calc()">
+</body>
+</html>

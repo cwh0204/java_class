@@ -23,29 +23,4 @@ public class DeptDTO {
 	 * 매핑(mapping)은 서로 다른 구조나 표현 방식을 가진 두 요소를 서로 연결하거나 대응시키는 작업을 의미 일대일, 일대다, 다대일,
 	 * 다대다 대응
 	 */
-	
-	public int getDeptno() {
-		return deptno;
-	}
-
-	public void setDeptno(int deptno) {
-		this.deptno = deptno;
-	}
-
-	public String getDname() {
-		return dname;
-	}
-
-	public void setDname(String dname) {
-		this.dname = dname;
-	}
-
-	public String getLoc() {
-		return loc;
-	}
-
-	public void setLoc(String loc) {
-		this.loc = loc;
-	}
-	
 }

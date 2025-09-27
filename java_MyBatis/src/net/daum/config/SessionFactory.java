@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-public class MyBatisSessionFactory {
+public class SessionFactory {
 /* SqlSession은 DB에 SQL문을 실행하기 위해 필요한 모든 메소드를 가지고 있다.
  *  SqlSession은 JDBC에서 개발자가 직접 Connection을 생성하고 PreparedStatement를
  *   이용해서 SQL을 실행하던 모든 작업을 내부적으로 자동으로 처리해 준다. 
