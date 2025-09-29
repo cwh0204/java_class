@@ -47,19 +47,4 @@ public class OracleMyBatisDAO {
 		sqlSession.delete("dept_del",dept);
 	}
 	
-	//부서정보 추가
-//	public DeptDTO getFindDeptNo(int deptno, SqlSession sqlSession) {
-//		// TODO Auto-generated method stub
-//		return sqlSession.selectOne("dept_info",deptno);
-//	}
-//	public void insertDept(DeptDTO dept, SqlSession sqlSession) {
-//		// TODO Auto-generated method stub
-//		sqlSession.insert("dept_in", dept);
-//	}
-//	public void delDeptNo(int deptno, SqlSession sqlSession) {
-//		sqlSession.delete("dept_del",deptno);
-//	}
-//	public void dept_up(DeptDTO dept, SqlSession sqlSession) {
-//		sqlSession.update("dept_up",dept);
-//	}
 }

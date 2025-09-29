@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript">
+	/*
+	 * 	문제) 단을 입력한 후 "출력" 버튼을 누르면 입력한 단에 해당하는 구구단을 아래의 textarea영역에 출력하는 프로그램을 만드시오
+	 */
+	window.onload = () => {
+		const num1Input = document.querySelector('[name="dan"]');
+		const num3Input = document.querySelector('[name="display"]');
+		const num2Input = document.querySelector('#printBtn');
+		num2Input.addEventListener("click", () => {
+			num3Input.value = "";
+			const num1 = num1Input.value;
+			for (let i = 1; i <= 9; i++) {
+				num3Input.value += num1 + " * " + i +" = " + num1 * i + "\n";
+			}
+		});
+	};
+</script>
+
+</head>
+<body>
+	<input type="text" name="dan" size="3"
+		style="width: 100px; height: 40px; font-size: 20px;">단
+	<input type="button" value=" 출 력 " id="printBtn">
+	<textarea rows="15" cols="20" name="display" style="font-size: 25px;"></textarea>
+</body>
+</html>

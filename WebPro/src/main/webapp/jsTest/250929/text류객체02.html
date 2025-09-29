@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+	/* 문제) 숫자 2개와 연산자를 입력한 후 '결과출력' 버튼을 누르면 계산된 결과가 출력되는 프로그램을 작성하시오.
+		(연산자는 +,-,*,/,% 만 허용한다.)
+		
+	
+	 */
+	window.onload = function() {
+		const calcBtn = document.getElementById("calcBtn");
+
+		const form = document.exForm;
+		
+		const a = 10;
+		
+		console.log(a);
+		
+		calcBtn.addEventListener("click", function() {
+
+			const num1Input = document.querySelector('[name="num1"]');
+			const num2Input = document.querySelector('[name="num2"]');
+			const num3Input = document.querySelector('[name="op"]');
+			const resultOutput = document.querySelector('[name="num3"]');
+
+			switch (num3Input.value) {
+			case "+":
+				resultOutput.value = parseInt(num1Input.value)
+						+ parseInt(num2Input.value);
+				break;
+			case "-":
+				resultOutput.value = parseInt(num1Input.value)
+						- parseInt(num2Input.value);
+				break;
+			case "*":
+				resultOutput.value = parseInt(num1Input.value)
+						* parseInt(num2Input.value);
+				break;
+			case "/":
+				resultOutput.value = parseInt(num1Input.value)
+						/ parseInt(num2Input.value);
+				break;
+			}
+		});
+	}
+</script>
+</head>
+<body>
+	<form name="exForm">
+		첫번째 값 : <input type="text" name="num1"><br> 두번째 값 : <input
+			type="text" name="num2"><br> 연산자 값 : <input type="text"
+			name="op" maxlength="1"><br> <input type="button"
+			value="결 과 출 력" id="calcBtn"> 결과 : <input type="text"
+			name="num3"><br>
+
+	</form>
+</body>
+</html>

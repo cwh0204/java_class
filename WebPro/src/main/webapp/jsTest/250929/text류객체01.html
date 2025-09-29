@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript">
+/*
+ * text객체, password객체, textarea객체
+ 
+   -속성
+   value ==> 객체에 입력된 현재의 값을 나타낸다.
+   		 ==> 이 속성에 '새로운 문자열'을 대입하면 해당 객체에 출력된다.
+   		 ==> textarea에서는 줄바꿈은 `\n`을 사용한다.
+   -메서드
+   fucis() ==> 해당 객체에 포커스를 준다.
+   blur()  ==> 해당 객체에 있는 포커스를 없앤다.
+   
+ */
+ const view = () => {
+	 console.log("text", document.testForm.txtName.value); 
+	 console.log("text2", document.querySelector('#txtName').value); 
+	 
+ }
+</script>
+</head>
+<body>
+<form name="testForm">
+	이 름 : <input type="text" name="txtName" id="txtName"><br><br>
+	암 호 : <input type="password" name="pass" id="txtPass"><br><br> 
+	내 용 : <textarea rows="7" cols="50" name="content"></textarea><br><br>
+	
+	<input type="button" value="확 인" onclick="view()">
+</form>
+</body>
+</html>

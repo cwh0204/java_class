@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+
+/*
+ * 	아래의 radio 객체에서 변경할 색을 선택한 후 '배경색 바꾸기' 버튼을 누르면
+ 	현재 문서의 배경색을 선택한 색으로 변경하기
+ */
+
+const changeColor = () => {
+	// <body> 엘리멘트 객체 구하기
+	// 형식1) document.getElementsByTagNmae("body")[0]
+	// 형식2) document.body
+	// document.body.style.backgroundColor;
+	
+	const f = document.exForm;
+	
+	let color = "";
+	for(let i=0; i< f.color.length; i++){
+		if(f.color[i].checked){
+			color = f.color[i].value;
+		}
+	}
+	
+	if(color == ""){
+		alert("변경할 배경색을 선택한 후 사용하세요...");
+	}else{
+		document.body.style.backgroundColor = color;
+	}
+	
+}
+
+</script>
+</head>
+<body>
+<form name="exForm">
+	배경색 선택:
+		<input type="radio" name="color" value="red">Red
+		<input type="radio" name="color" value="green">Green
+		<input type="radio" name="color" value="blue">Blue
+		<input type="radio" name="color" value="white">White
+		<input type="radio" name="color" value="black">Black
+		<br><br>
+		<input type="button" value="배경색 바꾸기" onclick="changeColor()">
+</form>
+</body>
+</html>

@@ -51,18 +51,20 @@ public class OracleMyBatisMain {
 	}
 	
 	public void mainMenu() {
-		System.out.println();//개행 -> 줄바꿈
-		System.out.println("-----------------------------");
-		System.out.println("메인 메뉴 : 1.Create | 2.Read | 3.Clear | 4.Exit");
-		System.out.println("메뉴 선택:");
-		String menuNo = scan.nextLine();
-		
-		//switch~case 다중선택문으로 분기
-		switch(menuNo) {
-		case "1" : create(); break; //부서정보 추가
-		case "2" : read(); break;
-		case "3" : clear(); break;
-		case "4" : exit(); break;
+		for(;;) {
+			System.out.println();//개행 -> 줄바꿈
+			System.out.println("-----------------------------");
+			System.out.println("메인 메뉴 : 1.Create | 2.Read | 3.Clear | 4.Exit");
+			System.out.println("메뉴 선택:");
+			String menuNo = scan.nextLine();
+			
+			//switch~case 다중선택문으로 분기
+			switch(menuNo) {
+			case "1" : create(); break; //부서정보 추가
+			case "2" : read(); break;
+			case "3" : clear(); break;
+			case "4" : exit(); break;
+			}
 		}
 	}
 
@@ -112,16 +114,22 @@ public class OracleMyBatisMain {
 	
 	private void clear() {
 		// TODO Auto-generated method stub
+		System.out.println("[부서전체 삭제]");
+		System.out.println("========================");
+		System.out.println("보조 메뉴: 1.OK || 2. Cancel");
+		System.out.println("메뉴 선택>>");
+		String menuNo = scan.nextLine();
 		List<DeptDTO> dlist = this.service.selectAll();
-		
-		if(dlist != null && dlist.size() > 0) {
-			//1부터 한다.
-			//향상된 확장 for반복문
-			for(DeptDTO d: dlist) {
-				service.delDept(d);
+		if(menuNo.equals("1")) {
+			if(dlist != null && dlist.size() > 0) {
+				for(DeptDTO d: dlist) {
+					service.delDept(d);
+				}
+			}else {
+				System.out.println("부서 목록이 없습니다!");
 			}
 		}else {
-			System.out.println("부서 목록이 없습니다!");
+			list();
 		}
 	}
 	
