@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+
+// 추가하는 함수
+
+const addButton = document.querySelector('input[name="add"]');
+/* 
+addButton.addEventListener('click', () => {
+	add();
+}); */
+window.onload = () => {
+	add = () =>{
+		const table = documentq.querySelection('[name="table"]');
+		const newRow = table.insertRow();
+		const newCell1 = newRow.insertCell(0);
+		const newCell2 = newRow.insertCell(1);
+		const newCell3 = newRow.insertCell(1);
+		newCell1.innerText = '테스트';
+		newCell2.innerText = '테스트1';
+		newCell3.innerText = '테스트1';
+	}
+}
+
+//왼쪽에서 선택한 한 개의 항목을 오른쪽으로 이동하는 함수
+
+right = () => {
+	
+}
+
+//왼쪽의 전체 항목을 오른쪽으로 이동하는 함수
+
+rightAll = () => {
+	
+}
+
+//오른쪽에서 선택한 한개의 항목을 왼쪽으로 이동하는 함수
+
+left = () => {
+	
+}
+
+//오른쪽의 전체 항목을 왼쪽으로 이동하는 함수
+
+leftAll = () =>{
+	
+}
+</script>
+</head>
+<body>
+
+<form>
+<table name='table'>
+<tr>
+	<td colspan="3">select 객체 연습</td>
+</tr>
+
+<input type="button" value="추가" name="add" onclick="add()">
+<input type="button" value="한개 오른쪽 이동" name="right">
+<input type="button" value="전체 오른쪽 이동" name="rightAll">
+<input type="button" value="오른쪽 한개 왼쪽 이동" name="left">
+<input type="button" value="오른쪽 전체 왼쪽 이동" name="leftAll">
+</table>
+</form>
+
+
+</body>
+</html>

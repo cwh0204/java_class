@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+/* document.addEventListener("DOMContentLoaded", ()=> {
+   document.querySelector("#guguBtn").addEventListener("click", ()=>{
+      const dan = document.guguForm.dan.value;
+      //const index = document.guguForm.dan.selectedIndex;
+      //dan = document.guguForm.dan.options[index].value;
+      
+      let htmlCode = `<h3>${dan} 단</h3>`;
+      for(let i=1; i<=9; i++){
+         let r = dan * i;
+         htmlCode += `${dan} * ${i} = ${r}<br>`;
+      }
+      
+      document.querySelector("#result").innerHTML = htmlCode;      
+   });
+}); */
+
+   // select객체의 값이 변경되면 처리되는 이벤트 ==> change 이벤트
+      // 이벤트 핸들러의 매개변수(현재 : e )는 event관련 정보가 저장된 객체가  된다.
+      // 이것은 event객체라고 한다.
+      
+      // e.currentTarget ==> 이벤트가 발생한 엘리먼트를 나타낸다.(지금은 select 객체)
+      // console.log(e.currentTarget);
+/*       document.querySelector("select[name='dan']").addEventListener("change", (e)=> {
+      const sel = e.currentTarget;
+      const index = sel.selectedIndex;
+      const dan = sel.options[index].value;
+      
+      let htmlCode = `<h3>${dan} 단 </h3>
+      for (let i=1; i<=9; i++){
+         let r = dan * i;
+         htmlCode += `${dan} * ${i} = ${r}<br>`;
+         
+      }
+      
+      document.querySelector("#result").innerHTM
+      
+   }) */
+   
+
+   
+   
+   
+
+</script>
+</head>
+<body>
+
+	<form name="guguForm">
+		<select name="dan">
+			<option value="1">1 단</option>
+			<option value="2">2 단</option>
+			<option value="3">3 단</option>
+			<option value="4">4 단</option>
+			<option value="5">5 단</option>
+			<option value="6">6 단</option>
+			<option value="7">7 단</option>
+			<option value="8">8 단</option>
+			<option value="9">9 단</option>
+		</select> <input type="button" value="출력" id="guguBtn">
+	</form>
+
+	<h3>결과 출력</h3>
+	<div id="result"></div>
+
+<script>
+const guguBtn = document.getElementById('guguBtn');
+const danSelect = document.querySelector('select[name="dan"]');
+const resultDiv = document.getElementById('result');
+
+const gugu = () => {
+    const selectedDan = danSelect.value;
+    
+    let resultHTML = '';
+
+    for (let i = 1; i <= 9; i++) {
+        resultHTML += `<p>${selectedDan} * ${i} = ${selectedDan * i}</p>`;
+    }
+    resultDiv.innerHTML = resultHTML;
+};
+
+guguBtn.addEventListener('click', gugu);
+
+
+</script>
+
+</body>
+</html>
