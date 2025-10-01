@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+ui{
+	list-style-type:none; padding:0px 
+}
+
+li{
+	padding:0; display:inline;
+}
+
+.imgText{
+	padding: 0px 10px;
+}
+</style>
+
+</head>
+
+<body>
+<ul>
+	<li><a href="../../images/jQuery.jpg" class="imgText">jQuery</a></li>
+	<li><a href="../../images/JSP2_1.jpg" class="imgText">JSP</a></li>
+	<li><a href="../../images/UML.jpg" class="imgText">UML</a></li>
+</ul>
+<hr color="red">
+<img src="../../images/JSP2_1.jpg" id="imgView">
+
+</body>
+
+<script type="text/javascript">
+
+const aTagList = document.querySelectorAll(".imgText");
+
+aTagList.forEach( (v, i) => {
+	v.addEventListener("click", (e)=>{
+		e.preventDefault();
+		const hrefAddress = e.target.getAttribute('href');
+	    document.querySelector("#imgView").src = hrefAddress;
+	});
+});
+</script>
+</html>

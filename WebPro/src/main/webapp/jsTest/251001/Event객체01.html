@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event 객체</title>
+<script>
+
+/*
+    event 객체 ==> 이벤트가 발생했을 때 전달되는 부가적인 정보가 저장된 객체
+              ==> event 객체는 보통 window.event라는 이름으로 구성되어 있음.
+ 
+ */
+function test1(){
+       //console.log(window.event);
+       alert(event.type)
+       }
+ 
+function test2(e) {
+   console.log("mouse_which", e.which)
+}
+
+function test3(e){
+   //console.log(e);
+   console.log("keyCode", e.keyCode);  //누른 키의 코드값
+   console.log("key_which", e.which);   //키보드 이벤트 ==> keyCode와 같다.
+   console.log("key", e.key);
+   
+   console.log("altKey", e.altKey); //Alt키 누른 상태에서만 true , 그 외에 false
+   console.log("Ctrl", e.ctrlKey);
+   console.log("Shift", e.shiftKey);
+   
+}
+ 
+ //이벤트가 발생하면 처리되는 이벤트 핸들러의 매개변수에는 event객체가 자동으로 주입된다.
+ 
+ document.onmousedown = function(e){ //매개변수 e에는 자동으로 event객체가 저장된다.
+    //console.log(e.which);
+ 
+ if(e.which==3){
+    alert("오른쪽 버튼 사용 금지.");
+    }
+ }
+ 
+
+</script>
+
+
+</head>
+<body>
+
+<form>
+   <input type="button" value="클릭1" onclick="test1()">
+   <input type="text" id="indata" onkeydown="test3(event)">
+   <input type="button" value="클릭2" onmousedown="text2(event)">
+
+
+</form>
+
+</body>
+</html>

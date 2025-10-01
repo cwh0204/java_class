@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#myDiv { width: 300px; height: 200px; background-color: yellow; padding: 20px; }
+
+#mySpan { padding: 50px; background-color: pink; }
+</style>
+
+<script>
+
+/* 이벤트가 발생하면 발생한 이벤트는 현재 엘리먼트에서 상위 엘리멘트 쪽으로 자동으로 전달됨.
+   ==> 이런 현상을 '버블링'이라고 함.
+   
+   
+ */
+
+document.addEventListener("DOMContentLoaded", ()=>{
+      document.querySelector("#myDiv").addEventListener("click", (e)=>{
+         //e.target ==> 이벤트가 처음 발생한 객체를 나타냄.
+         //e.currentTarget ==> 현재 처리되는 이벤트 핸들러가 설정된 객체를 나타냄.
+         
+         //console.log("div영역 target", e.target);
+         //console.log("div영역 currentTarget", e.currentTarget);
+   		 e.stopPropagation();
+   		 
+         alert("div 영역 클릭");
+      
+         });
+      document.querySelector("#mySpan").addEventListener("click", (e)=>{
+         alert("span 영역 클릭");   
+      });
+      document.querySelector("#myBtn").addEventListener("click", (e)=>{
+         alert("Btn 영역 클릭");   
+   });   
+});
+
+
+</script>
+
+</head>
+<body>
+
+<div id="myDiv">
+   <span id="mySpan">
+      <input type="button" value="클릭하세요" id="myBtn">
+   </span>
+</div>
+
+<br><br><hr color="red"><br><br>
+
+
+</body>
+</html>
